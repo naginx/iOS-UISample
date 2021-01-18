@@ -14,6 +14,7 @@
 		45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFD25B64B6C005E4544 /* Assets.xcassets */; };
 		45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFF25B64B6C005E4544 /* LaunchScreen.storyboard */; };
 		45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 45834D0925B64C51005E4544 /* .swiftlint.yml */; };
+		45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834D0E25B64DE2005E4544 /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		45834D0025B64B6C005E4544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45834D0225B64B6C005E4544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45834D0925B64C51005E4544 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		45834D0E25B64DE2005E4544 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				45834CF425B64B6A005E4544 /* AppDelegate.swift */,
 				45834CF625B64B6A005E4544 /* SceneDelegate.swift */,
 				45834CF825B64B6A005E4544 /* ViewController.swift */,
+				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
 				45834CFA25B64B6A005E4544 /* Main.storyboard */,
 				45834CFD25B64B6C005E4544 /* Assets.xcassets */,
 				45834CFF25B64B6C005E4544 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 			files = (
 				45834CF925B64B6A005E4544 /* ViewController.swift in Sources */,
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
+				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
 				45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
