@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF425B64B6A005E4544 /* AppDelegate.swift */; };
 		45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF625B64B6A005E4544 /* SceneDelegate.swift */; };
-		45834CF925B64B6A005E4544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF825B64B6A005E4544 /* ViewController.swift */; };
+		45834CF925B64B6A005E4544 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF825B64B6A005E4544 /* SampleTableViewController.swift */; };
 		45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFD25B64B6C005E4544 /* Assets.xcassets */; };
 		45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFF25B64B6C005E4544 /* LaunchScreen.storyboard */; };
 		45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 45834D0925B64C51005E4544 /* .swiftlint.yml */; };
 		45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834D0E25B64DE2005E4544 /* MainTabController.swift */; };
+		45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834D1A25B65CEA005E4544 /* UIImage+.swift */; };
 		B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +22,13 @@
 		45834CF125B64B6A005E4544 /* iOS-UISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UISample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45834CF425B64B6A005E4544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45834CF625B64B6A005E4544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45834CF825B64B6A005E4544 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45834CF825B64B6A005E4544 /* SampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
 		45834CFD25B64B6C005E4544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45834D0025B64B6C005E4544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45834D0225B64B6C005E4544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45834D0925B64C51005E4544 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		45834D0E25B64DE2005E4544 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		45834D1A25B65CEA005E4544 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_UISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.release.xcconfig"; sourceTree = "<group>"; };
 		9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,9 +76,10 @@
 		45834CF325B64B6A005E4544 /* iOS-UISample */ = {
 			isa = PBXGroup;
 			children = (
+				45834D1925B65CCA005E4544 /* Extension */,
 				45834CF425B64B6A005E4544 /* AppDelegate.swift */,
 				45834CF625B64B6A005E4544 /* SceneDelegate.swift */,
-				45834CF825B64B6A005E4544 /* ViewController.swift */,
+				45834CF825B64B6A005E4544 /* SampleTableViewController.swift */,
 				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
 				45834CFD25B64B6C005E4544 /* Assets.xcassets */,
 				45834CFF25B64B6C005E4544 /* LaunchScreen.storyboard */,
@@ -85,13 +88,20 @@
 			path = "iOS-UISample";
 			sourceTree = "<group>";
 		};
+		45834D1925B65CCA005E4544 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				45834D1A25B65CEA005E4544 /* UIImage+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B61D56B328EDE3C513D5FA7A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */,
 				7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,8 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45834CF925B64B6A005E4544 /* ViewController.swift in Sources */,
+				45834CF925B64B6A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
+				45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
 				45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */,
 			);

@@ -15,7 +15,7 @@ final class MainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        configureViewControllers()
     }
 
     // MARK: - Selectors
@@ -23,4 +23,18 @@ final class MainTabController: UITabBarController {
     // MARK: - API
 
     // MARK: - Helpers
+
+    private func configureViewControllers() {
+        let tableVC = SampleTableViewController()
+        let nav1 = templateNavigationController(image: UIImage.named("home_unselected"), rootViewController: tableVC)
+
+        viewControllers = [nav1]
+    }
+
+    private func templateNavigationController(image: UIImage, rootViewController: UIViewController) -> UINavigationController {
+        let nav = UINavigationController(rootViewController: rootViewController)
+        nav.tabBarItem.image = image
+        nav.navigationBar.barTintColor = .white
+        return nav
+    }
 }
