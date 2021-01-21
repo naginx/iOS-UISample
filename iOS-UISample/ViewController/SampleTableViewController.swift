@@ -7,19 +7,30 @@
 
 import UIKit
 
+// 影響範囲の限定に加えパフォーマンスの向上もできるので、基本final付与
+// 参考: https://zenn.dev/k_koheyi/articles/b7745d4d277952579733
 final class SampleTableViewController: UIViewController {
 
     // MARK: - Properties
 
+    // デフォルトでinternalなため忘れがちだがIBOutletもprivate推奨
+    // 参考: https://cocoacasts.com/tips-and-tricks-why-you-should-default-to-private-outlets
     @IBOutlet weak private var tableView: UITableView! {
+
+        // willSet/didSetで構成しておくと、可視性があがる
+        // 加えてライフサイクルを意識したレイアウト設定の記述を強制できる
+        // 但し、View初期化時にしか設定できない項目はXIB側で行う必要がある(例: TableViewのgrouped)
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.rowHeight = 60
+            tableView.rowHeight = SampleTableViewCell.height
             tableView.separatorStyle = .none
 
-            // クラス名を指定してxibファイルを読み込み、tableViewに使用するセルとして登録する
-            let cellClassName = SampleTableViewCell.reuseIdentifier
+            // TableViewにヘッダーを登録
+            let headerNib = UINib(nibName: headerClassName, bundle: nil)
+            tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: headerClassName)
+
+            // TableViewにセルを登録
             let cellNib = UINib(nibName: cellClassName, bundle: nil)
             tableView.register(cellNib, forCellReuseIdentifier: cellClassName)
 
@@ -31,9 +42,17 @@ final class SampleTableViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak private var postButton: UIButton!
+
+    @IBAction private func postButtonTapped(_ sender: Any) {
+        postButtonTappedHandler()
+    }
+
+    private let headerClassName = SampleTableHeaderView.identifier
+    private let cellClassName = SampleTableViewCell.identifier
+
     private let api = UserAPI()
 
-    /// リフレッシュ設定のための変数
     private let refreshControl = UIRefreshControl()
 
     private var users = [User]()
@@ -46,6 +65,12 @@ final class SampleTableViewController: UIViewController {
         fetchUsers()
     }
 
+    /// AutoLayoutによる画面サイズ決定後に実行したい処理をここで記述する
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        configureUI()
+    }
+
     // MARK: - Selectors
 
     @objc func refresh(sender: UIRefreshControl) {
@@ -55,8 +80,11 @@ final class SampleTableViewController: UIViewController {
     // MARK: - API
 
     private func fetchUsers() {
+
+        // API通信の直前にリフレッシュを開始
         refreshControl.beginRefreshing()
         api.getUsers { (users, error) in
+            // 通信完了直後にリフレッシュを停止
             self.refreshControl.endRefreshing()
             if let error = error {
                 print("エラーが発生しました: \(error)")
@@ -69,12 +97,21 @@ final class SampleTableViewController: UIViewController {
             }
 
             self.users = users
+
+            // データの変更を反映させるためにリロード
             self.tableView.reloadData()
         }
     }
 
     // MARK: - Helpers
 
+    private func configureUI() {
+        postButton.layer.cornerRadius = postButton.frame.height / 2
+    }
+
+    private func postButtonTappedHandler() {
+        print("postButtonがタップされたよ")
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -99,10 +136,26 @@ extension SampleTableViewController: UITableViewDataSource {
 
     /// セルの中身を設定する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SampleTableViewCell.reuseIdentifier,
+
+        // クラス読み込みと違い、nib読み込みと同時に初期化処理ができないので、
+        // nibとして読み込んだあとにconfigureを行う
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellClassName,
                                                  for: indexPath) as! SampleTableViewCell
         guard let user = users[safe: indexPath.row] else { return cell }
         cell.configure(user: user)
         return cell
+    }
+
+    /// ヘッダーの高さを設定する
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return SampleTableHeaderView.height
+    }
+
+    /// ヘッダーの中身を設定する
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // 強制アンラップが許容される事例
+        // 参考: https://stackoverflow.com/questions/34383679/best-practice-for-initialising-uitableviewcells-in-swift
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerClassName) as! SampleTableHeaderView
+        return headerView
     }
 }

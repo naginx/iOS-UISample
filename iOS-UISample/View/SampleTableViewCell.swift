@@ -52,6 +52,8 @@ final class SampleTableViewCell: UITableViewCell {
         }
     }
 
+    static let height: CGFloat = 60
+
     // MARK: - LifeCycle
 
     override func layoutSubviews() {

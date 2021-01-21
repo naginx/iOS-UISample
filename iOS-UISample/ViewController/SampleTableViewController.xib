@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleTableViewController" customModule="iOS_UISample" customModuleProvider="target">
             <connections>
+                <outlet property="postButton" destination="YON-aA-k25" id="Kq0-uQ-dSG"/>
                 <outlet property="tableView" destination="ZGu-90-fjf" id="Kns-Uu-TJ9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,10 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZGu-90-fjf">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZGu-90-fjf">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YON-aA-k25">
+                    <rect key="frame" x="326" y="774" width="56" height="56"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="0eL-Uh-euR"/>
+                        <constraint firstAttribute="height" constant="56" id="gY4-iF-hdt"/>
+                    </constraints>
+                    <connections>
+                        <action selector="postButtonTapped:" destination="-1" eventType="touchUpInside" id="O2z-7x-weT"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,14 +43,19 @@
                 <constraint firstItem="ZGu-90-fjf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="962-oj-yXy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZGu-90-fjf" secondAttribute="bottom" id="Pqt-Jq-akm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZGu-90-fjf" secondAttribute="trailing" id="Y4q-1x-V6R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YON-aA-k25" secondAttribute="trailing" constant="32" id="m3c-08-ahZ"/>
                 <constraint firstItem="ZGu-90-fjf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tTG-KO-3Ok"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YON-aA-k25" secondAttribute="bottom" constant="32" id="weu-q3-sHF"/>
             </constraints>
-            <point key="canvasLocation" x="-186" y="135"/>
+            <point key="canvasLocation" x="-188" y="98"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

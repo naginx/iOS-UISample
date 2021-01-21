@@ -9,6 +9,6 @@ import UIKit
 
 extension UIView {
 
-    /// reuseIdentifierを取得する際に、クラス名から算出して返せるように
-    static var reuseIdentifier: String { String(describing: Self.self) }
+    /// 識別子をクラス名から算出して返せるように
+    static var identifier: String { String(describing: Self.self) }
 }
