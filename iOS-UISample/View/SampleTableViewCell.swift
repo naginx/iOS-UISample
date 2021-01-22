@@ -11,18 +11,6 @@ final class SampleTableViewCell: UITableViewCell {
 
     // MARK: - Properties
 
-    @IBOutlet weak private var horizontalStackView: UIStackView! {
-        didSet {
-            horizontalStackView.spacing = 4
-        }
-    }
-
-    @IBOutlet weak private var verticalStackView: UIStackView! {
-        didSet {
-            verticalStackView.spacing = 4
-        }
-    }
-    
     @IBOutlet weak private var profileImage: UIImageView! {
         didSet {
             profileImage.contentMode = .scaleAspectFill
@@ -32,14 +20,12 @@ final class SampleTableViewCell: UITableViewCell {
 
     @IBOutlet weak private var nameLabel: UILabel! {
         didSet {
-            nameLabel.font = UIFont.boldSystemFont(ofSize: 14)
             nameLabel.textColor = .lightGray
         }
     }
 
     @IBOutlet weak private var messageLabel: UILabel! {
         didSet {
-            messageLabel.font = UIFont.boldSystemFont(ofSize: 12)
             messageLabel.textColor = .lightGray
         }
     }

@@ -27,17 +27,17 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tgz-At-Tgd">
-                                <rect key="frame" x="36" y="0.0" width="248" height="36"/>
+                                <rect key="frame" x="36" y="0.0" width="240" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byR-RK-JtP">
-                                        <rect key="frame" x="0.0" y="0.0" width="248" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-Gl-aXv" userLabel="Message Label">
-                                        <rect key="frame" x="0.0" y="21.5" width="248" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="21.5" width="240" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yFT-pc-VSw">
-                                <rect key="frame" x="284" y="4" width="28" height="28"/>
+                                <rect key="frame" x="276" y="0.0" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yFT-pc-VSw" secondAttribute="height" multiplier="1:1" id="tJy-Fl-r8x"/>
                                 </constraints>
@@ -55,8 +55,6 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="sxq-Hm-uQn" firstAttribute="top" secondItem="Y3E-tU-Y4f" secondAttribute="top" id="Ahc-L1-B2U"/>
-                            <constraint firstItem="yFT-pc-VSw" firstAttribute="top" secondItem="Y3E-tU-Y4f" secondAttribute="top" constant="4" id="Ekz-3s-OPM"/>
-                            <constraint firstAttribute="bottom" secondItem="yFT-pc-VSw" secondAttribute="bottom" constant="4" id="Iwb-OO-B70"/>
                             <constraint firstAttribute="bottom" secondItem="sxq-Hm-uQn" secondAttribute="bottom" id="kpm-6F-ALo"/>
                             <constraint firstItem="sxq-Hm-uQn" firstAttribute="leading" secondItem="Y3E-tU-Y4f" secondAttribute="leading" id="yhA-gM-EwE"/>
                         </constraints>
@@ -72,11 +70,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="arrowImage" destination="yFT-pc-VSw" id="T9s-mB-VkD"/>
-                <outlet property="horizontalStackView" destination="Y3E-tU-Y4f" id="Hhh-g2-ojz"/>
                 <outlet property="messageLabel" destination="oLg-Gl-aXv" id="hXz-kE-eCZ"/>
                 <outlet property="nameLabel" destination="byR-RK-JtP" id="SbK-FD-HlG"/>
                 <outlet property="profileImage" destination="sxq-Hm-uQn" id="deL-FE-Jet"/>
-                <outlet property="verticalStackView" destination="tgz-At-Tgd" id="Wp3-y9-Kzx"/>
             </connections>
             <point key="canvasLocation" x="58" y="133"/>
         </tableViewCell>
