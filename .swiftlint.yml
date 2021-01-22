@@ -40,7 +40,7 @@ excluded:
 
 # 1行あたりの文字数制限を300に変更
 # プロジェクト作成時にデフォルトで追加されるコメントをひっかけないため
-line_length: 300
+line_length: 120
 
 # 変数名に関する制約
 identifier_name:

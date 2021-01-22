@@ -155,7 +155,8 @@ extension SampleTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // 強制アンラップが許容される事例
         // 参考: https://stackoverflow.com/questions/34383679/best-practice-for-initialising-uitableviewcells-in-swift
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerClassName) as! SampleTableHeaderView
+        let headerView = tableView
+            .dequeueReusableHeaderFooterView(withIdentifier: headerClassName) as! SampleTableHeaderView
         return headerView
     }
 }
