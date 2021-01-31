@@ -57,11 +57,13 @@ final class SampleTableViewController: UIViewController {
 
     private var users = [User]()
 
+    private var header: SampleTableHeaderView?
+
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "TableViewSample"
+        configureNavigationItem()
         fetchUsers()
     }
 
@@ -105,6 +107,12 @@ final class SampleTableViewController: UIViewController {
 
     // MARK: - Helpers
 
+    private func configureNavigationItem() {
+        navigationItem.title = "TableViewSample"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "戻る", style: .plain,
+                                                           target: nil, action: nil)
+    }
+
     private func configureUI() {
         postButton.layer.cornerRadius = postButton.frame.height / 2
     }
@@ -121,7 +129,8 @@ extension SampleTableViewController: UITableViewDelegate {
     /// セルをタップしたときに呼ばれる
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let user = users[safe: indexPath.row] else { return }
-        print(user.name)
+        let vc = ProfileViewController(user: user)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -136,9 +145,6 @@ extension SampleTableViewController: UITableViewDataSource {
 
     /// セルの中身を設定する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        // クラス読み込みと違い、nib読み込みと同時に初期化処理ができないので、
-        // nibとして読み込んだあとにconfigureを行う
         let cell = tableView.dequeueReusableCell(withIdentifier: cellClassName,
                                                  for: indexPath) as! SampleTableViewCell
         guard let user = users[safe: indexPath.row] else { return cell }
@@ -155,8 +161,22 @@ extension SampleTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // 強制アンラップが許容される事例
         // 参考: https://stackoverflow.com/questions/34383679/best-practice-for-initialising-uitableviewcells-in-swift
-        let headerView = tableView
+        let header = tableView
             .dequeueReusableHeaderFooterView(withIdentifier: headerClassName) as! SampleTableHeaderView
-        return headerView
+
+        // ヘッダーが作成されるタイミングでdelegateの設定
+        header.delegate = self
+        self.header = header
+        return header
+    }
+}
+
+// MARK: - SampleTableHeaderViewDelegate
+
+extension SampleTableViewController: SampleTableHeaderViewDelegate {
+
+    func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User) {
+        let vc = ProfileViewController(user: user)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

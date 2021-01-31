@@ -8,6 +8,10 @@
 import SnapKit
 import UIKit
 
+protocol SampleTableHeaderViewDelegate: AnyObject {
+    func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User)
+}
+
 final class SampleTableHeaderView: UITableViewHeaderFooterView {
 
     // MARK: - Properties
@@ -45,6 +49,8 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
     private let api = UserAPI()
 
     private var users = [User]()
+
+    weak var delegate: SampleTableHeaderViewDelegate?
 
     // MARK: - LifeCycle
 
@@ -113,8 +119,8 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
 extension SampleTableHeaderView: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let user = users[safe: indexPath.row] else { return }
-        // ユーザーのプロフィールに遷移させるDelegateメソッドを作成する
+        guard let user = users[safe: indexPath.row] else { return }
+        delegate?.didTapProfileImage(self, didSelectUser: user)
     }
 }
 
