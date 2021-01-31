@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
+		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
 		45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF425B64B6A005E4544 /* AppDelegate.swift */; };
 		45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF625B64B6A005E4544 /* SceneDelegate.swift */; };
 		45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFD25B64B6C005E4544 /* Assets.xcassets */; };
@@ -23,11 +25,12 @@
 		45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834E0325B7CBAD005E4544 /* UIView+.swift */; };
 		45834E0A25B7CE88005E4544 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834E0925B7CE88005E4544 /* Array+.swift */; };
 		45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */; };
-		45834E2025B8139A005E4544 /* SampleTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45834E1E25B8139A005E4544 /* SampleTableHeaderView.xib */; };
 		B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		45834CF125B64B6A005E4544 /* iOS-UISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UISample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45834CF425B64B6A005E4544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45834CF625B64B6A005E4544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		45834E0325B7CBAD005E4544 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		45834E0925B7CE88005E4544 /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderView.swift; sourceTree = "<group>"; };
-		45834E1E25B8139A005E4544 /* SampleTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderView.xib; sourceTree = "<group>"; };
 		76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_UISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.release.xcconfig"; sourceTree = "<group>"; };
 		9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +138,8 @@
 				45834DFE25B7CAA0005E4544 /* SampleTableViewCell.swift */,
 				45834DFF25B7CAA0005E4544 /* SampleTableViewCell.xib */,
 				45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */,
-				45834E1E25B8139A005E4544 /* SampleTableHeaderView.xib */,
+				452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */,
+				452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45834E2025B8139A005E4544 /* SampleTableHeaderView.xib in Resources */,
 				45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */,
 				45834E0125B7CAA0005E4544 /* SampleTableViewCell.xib in Resources */,
+				452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */,
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
@@ -310,6 +313,7 @@
 			files = (
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
+				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,
 				45834DE725B7C1DB005E4544 /* User.swift in Sources */,
 				45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */,

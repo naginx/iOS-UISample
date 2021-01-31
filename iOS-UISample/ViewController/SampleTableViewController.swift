@@ -27,8 +27,8 @@ final class SampleTableViewController: UIViewController {
             tableView.separatorStyle = .none
 
             // TableViewにヘッダーを登録
-            let headerNib = UINib(nibName: headerClassName, bundle: nil)
-            tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: headerClassName)
+            tableView.register(SampleTableHeaderView.self,
+                               forHeaderFooterViewReuseIdentifier: headerClassName)
 
             // TableViewにセルを登録
             let cellNib = UINib(nibName: cellClassName, bundle: nil)
