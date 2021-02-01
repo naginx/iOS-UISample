@@ -18,4 +18,17 @@ extension UIView {
             addSubview(view)
         }
     }
+
+    /// UIViewから親のViewControllerを取得する処理
+    /// 引用: https://qiita.com/tetsukick/items/ae05fdc6040c491639a2
+    func parentViewController() -> UIViewController? {
+        var parentResponder: UIResponder? = self
+        while true {
+            guard let nextResponder = parentResponder?.next else { return nil }
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
+            }
+            parentResponder = nextResponder
+        }
+    }
 }

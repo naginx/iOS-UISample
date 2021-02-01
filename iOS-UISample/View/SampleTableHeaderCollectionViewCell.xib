@@ -22,15 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H9Z-jZ-mJb">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <rect key="frame" x="4" y="4" width="72" height="72"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H9Z-jZ-mJb" secondAttribute="trailing" id="2ks-1k-mIm"/>
-                            <constraint firstAttribute="bottom" secondItem="H9Z-jZ-mJb" secondAttribute="bottom" id="5S2-yh-0aJ"/>
-                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="leading" secondItem="PLO-AL-eeA" secondAttribute="leading" id="a00-sU-dsg"/>
-                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="top" secondItem="PLO-AL-eeA" secondAttribute="top" id="mFg-ro-AAO"/>
+                            <constraint firstAttribute="trailing" secondItem="H9Z-jZ-mJb" secondAttribute="trailing" constant="4" id="2ks-1k-mIm"/>
+                            <constraint firstAttribute="bottom" secondItem="H9Z-jZ-mJb" secondAttribute="bottom" constant="4" id="5S2-yh-0aJ"/>
+                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="leading" secondItem="PLO-AL-eeA" secondAttribute="leading" constant="4" id="a00-sU-dsg"/>
+                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="top" secondItem="PLO-AL-eeA" secondAttribute="top" constant="4" id="mFg-ro-AAO"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -44,6 +44,7 @@
             </constraints>
             <connections>
                 <outlet property="avatarImageView" destination="H9Z-jZ-mJb" id="aDG-mR-Uqe"/>
+                <outlet property="wrapperView" destination="PLO-AL-eeA" id="JMd-wP-Qd9"/>
             </connections>
             <point key="canvasLocation" x="55" y="121"/>
         </collectionViewCell>

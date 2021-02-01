@@ -175,8 +175,9 @@ extension SampleTableViewController: UITableViewDataSource {
 
 extension SampleTableViewController: SampleTableHeaderViewDelegate {
 
+    /// セルタップ時に呼ばれるDelgateメソッド
     func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User) {
-        let vc = ProfileViewController(user: user)
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = ProfileViewController(user: user)
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }

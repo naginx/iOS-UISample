@@ -119,8 +119,8 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
 extension SampleTableHeaderView: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let user = users[safe: indexPath.row] else { return }
-        delegate?.didTapProfileImage(self, didSelectUser: user)
+//        guard let user = users[safe: indexPath.row] else { return }
+//        delegate?.didTapProfileImage(self, didSelectUser: user)
     }
 }
 
