@@ -44,9 +44,7 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
     static let height: CGFloat = 100
 
     private let cellClassName = SampleTableHeaderCollectionViewCell.identifier
-
     private let refreshControl = UIRefreshControl()
-
     private let api = UserAPI()
 
     private var users = [User]()
