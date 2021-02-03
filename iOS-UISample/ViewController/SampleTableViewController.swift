@@ -57,8 +57,6 @@ final class SampleTableViewController: UIViewController {
 
     private var users = [User]()
 
-    private var header: SampleTableHeaderView?
-
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
@@ -166,7 +164,6 @@ extension SampleTableViewController: UITableViewDataSource {
 
         // ヘッダーが作成されるタイミングでdelegateの設定
         header.delegate = self
-        self.header = header
         return header
     }
 }
@@ -175,7 +172,8 @@ extension SampleTableViewController: UITableViewDataSource {
 
 extension SampleTableViewController: SampleTableHeaderViewDelegate {
 
-    func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User) {
+    /// セルタップ時に呼ばれるDelgateメソッド
+    func sampleTableHeaderView(_ header: SampleTableHeaderView, didSelect user: User) {
         let vc = ProfileViewController(user: user)
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -1,22 +1,26 @@
 PODS:
+  - EnhancedCircleImageView (0.1)
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - EnhancedCircleImageView
   - SDWebImage
   - SnapKit
 
 SPEC REPOS:
   trunk:
+    - EnhancedCircleImageView
     - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
+  EnhancedCircleImageView: 1069bbc14526d89502cc0e48b45f5da6a3317a47
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: d431211314f34c2f99ae46d16fa23d1524c516a3
+PODFILE CHECKSUM: 7e53678da875ca85e146200920d193e48e5f89e6
 
 COCOAPODS: 1.9.2
