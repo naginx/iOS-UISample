@@ -9,12 +9,14 @@ import SnapKit
 import UIKit
 
 protocol SampleTableHeaderViewDelegate: AnyObject {
-    func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User)
+    func sampleTableHeaderView(_ header: SampleTableHeaderView, didSelect user: User)
 }
 
 final class SampleTableHeaderView: UITableViewHeaderFooterView {
 
     // MARK: - Properties
+
+    weak var delegate: SampleTableHeaderViewDelegate?
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -30,7 +32,6 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
         let size: CGFloat = 72
         layout.itemSize = CGSize(width: size, height: size)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.delegate = self
         cv.dataSource = self
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
@@ -49,8 +50,6 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
     private let api = UserAPI()
 
     private var users = [User]()
-
-    weak var delegate: SampleTableHeaderViewDelegate?
 
     // MARK: - LifeCycle
 
@@ -114,16 +113,6 @@ final class SampleTableHeaderView: UITableViewHeaderFooterView {
     }
 }
 
-// MARK: - UICollectionViewDelegate
-
-extension SampleTableHeaderView: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let user = users[safe: indexPath.row] else { return }
-//        delegate?.didTapProfileImage(self, didSelectUser: user)
-    }
-}
-
 // MARK: - UICollectionViewDataSource
 
 extension SampleTableHeaderView: UICollectionViewDataSource {
@@ -138,7 +127,18 @@ extension SampleTableHeaderView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellClassName,
                                                       for: indexPath) as! SampleTableHeaderCollectionViewCell
         guard let user = users[safe: indexPath.row] else { return cell }
-        cell.configure(user: user)
+        cell.delegate = self
+        cell.configure(withUser: user)
         return cell
+    }
+}
+
+// MARK: - SampleTableHeaderCollectionViewCellDelegate
+
+extension SampleTableHeaderView: SampleTableHeaderCollectionViewCellDelegate {
+
+    /// ヘッダーのセルタップ時にViewのデリゲートを経由して呼ばれる
+    func sampleTableHeaderCollectionViewCell(_ cell: SampleTableHeaderCollectionViewCell, didSelect user: User) {
+        delegate?.sampleTableHeaderView(self, didSelect: user)
     }
 }

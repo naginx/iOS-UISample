@@ -21,16 +21,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-AL-eeA">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H9Z-jZ-mJb">
-                                <rect key="frame" x="4" y="4" width="72" height="72"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-Mi-AUI" customClass="EnhancedCircleImageView" customModule="EnhancedCircleImageView">
+                                <rect key="frame" x="2" y="2" width="76" height="76"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H9Z-jZ-mJb" secondAttribute="trailing" constant="4" id="2ks-1k-mIm"/>
-                            <constraint firstAttribute="bottom" secondItem="H9Z-jZ-mJb" secondAttribute="bottom" constant="4" id="5S2-yh-0aJ"/>
-                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="leading" secondItem="PLO-AL-eeA" secondAttribute="leading" constant="4" id="a00-sU-dsg"/>
-                            <constraint firstItem="H9Z-jZ-mJb" firstAttribute="top" secondItem="PLO-AL-eeA" secondAttribute="top" constant="4" id="mFg-ro-AAO"/>
+                            <constraint firstAttribute="bottom" secondItem="hdB-Mi-AUI" secondAttribute="bottom" constant="2" id="4nX-kY-Qn1"/>
+                            <constraint firstItem="hdB-Mi-AUI" firstAttribute="top" secondItem="PLO-AL-eeA" secondAttribute="top" constant="2" id="S6N-L9-ee7"/>
+                            <constraint firstItem="hdB-Mi-AUI" firstAttribute="leading" secondItem="PLO-AL-eeA" secondAttribute="leading" constant="2" id="T89-Me-6Gr"/>
+                            <constraint firstAttribute="trailing" secondItem="hdB-Mi-AUI" secondAttribute="trailing" constant="2" id="XMA-DV-M4I"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -43,10 +43,10 @@
                 <constraint firstAttribute="bottom" secondItem="PLO-AL-eeA" secondAttribute="bottom" id="t3l-3h-VA5"/>
             </constraints>
             <connections>
-                <outlet property="avatarImageView" destination="H9Z-jZ-mJb" id="aDG-mR-Uqe"/>
+                <outlet property="thumbnailView" destination="hdB-Mi-AUI" id="Wde-8z-rpL"/>
                 <outlet property="wrapperView" destination="PLO-AL-eeA" id="JMd-wP-Qd9"/>
             </connections>
-            <point key="canvasLocation" x="55" y="121"/>
+            <point key="canvasLocation" x="53.623188405797109" y="120.53571428571428"/>
         </collectionViewCell>
     </objects>
     <resources>

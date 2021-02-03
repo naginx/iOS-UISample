@@ -7,7 +7,7 @@ target 'iOS-UISample' do
   # Pods for iOS-UISample
   pod 'SDWebImage'
   pod 'SnapKit'
-
+  pod 'EnhancedCircleImageView'
 end
 
 post_install do |installer|

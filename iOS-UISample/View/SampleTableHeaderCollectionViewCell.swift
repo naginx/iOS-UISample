@@ -7,19 +7,31 @@
 
 import UIKit
 
+protocol SampleTableHeaderCollectionViewCellDelegate: AnyObject {
+    func sampleTableHeaderCollectionViewCell(_ cell: SampleTableHeaderCollectionViewCell, didSelect user: User)
+}
+
 final class SampleTableHeaderCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Properties
 
-    @IBOutlet weak private var wrapperView: UIView!
-    @IBOutlet weak private var avatarImageView: UIImageView! {
+    weak var delegate: SampleTableHeaderCollectionViewCellDelegate?
+
+    @IBOutlet weak private var wrapperView: UIView! {
         didSet {
-            avatarImageView.contentMode = .scaleAspectFill
+            wrapperView.clipsToBounds = true
+        }
+    }
+
+    // UIButtonにするとスクロールイベントと重複して、
+    // スクロールが動作しないため、ImageViewのジェスチャーで設定
+    @IBOutlet weak private var thumbnailView: UIImageView! {
+        didSet {
+            thumbnailView.isUserInteractionEnabled = true
             let tapGesture = UITapGestureRecognizer(
                 target: self,
-                action: #selector(avatarImageViewTapped))
-            avatarImageView.isUserInteractionEnabled = true
-            avatarImageView.addGestureRecognizer(tapGesture)
+                action: #selector(cellTapped))
+            thumbnailView.addGestureRecognizer(tapGesture)
         }
     }
 
@@ -34,33 +46,33 @@ final class SampleTableHeaderCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Selectors
 
-    @objc func avatarImageViewTapped() {
+    @objc func cellTapped() {
         guard let user = user else { return }
 
         // 閲覧済みユーザーであることがわかるよう枠線の色を変更
         wrapperView.layer.borderColor = UIColor.lightGray.cgColor
 
-        // FIXME: 親のViewControllerを取得して遷移する
-        if let parentVC = self.parentViewController() {
-            let profileVC = ProfileViewController(user: user)
-            parentVC.navigationController?.pushViewController(profileVC, animated: true)
-        }
+        // イベントを伝播
+        delegate?.sampleTableHeaderCollectionViewCell(self, didSelect: user)
     }
 
     // MARK: - Helpers
 
-    func configure(user: User) {
-        self.user = user
-        guard let imageName = user.image else { return }
+    func configure(withUser: User) {
+        self.user = withUser
+        guard let imageName = withUser.image else { return }
         let image = UIImage.named(imageName)
-        avatarImageView.image = image
+        thumbnailView.image = image
     }
 
     private func configureUI() {
-        wrapperView.layer.borderColor = UIColor.systemRed.cgColor
-        wrapperView.layer.borderWidth = 2
-        wrapperView.layer.cornerRadius = wrapperView.frame.height / 2
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.height / 2
-    }
+        DispatchQueue.main.async {
+            self.wrapperView.layer.cornerRadius = self.wrapperView.bounds.height / 2
+            self.wrapperView.layer.borderColor = UIColor.systemRed.cgColor
+            self.wrapperView.layer.borderWidth = 2
 
+            self.thumbnailView.layer.borderColor = UIColor.white.cgColor
+            self.thumbnailView.layer.borderWidth = 2
+        }
+    }
 }
