@@ -18,4 +18,12 @@ extension UIView {
             addSubview(view)
         }
     }
+
+    /// nibファイルからUIViewの読み込みを行う
+    func loadNib() {
+        guard let view = Bundle.main.loadNibNamed(Self.identifier, owner: self, options: nil)?.first as? UIView
+        else { fatalError("Failed to loadNib.") }
+        view.frame = self.bounds
+        self.addSubview(view)
+    }
 }
