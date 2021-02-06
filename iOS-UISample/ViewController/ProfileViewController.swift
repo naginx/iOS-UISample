@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// ペアーズ風のプロフィール画面
+/// ScrollViewの参考: https://qiita.com/Masataka-n/items/c19456f172627359d0d8
 final class ProfileViewController: UIViewController {
 
     // MARK: - Properties
