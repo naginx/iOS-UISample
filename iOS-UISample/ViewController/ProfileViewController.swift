@@ -15,6 +15,8 @@ final class ProfileViewController: UIViewController {
 
     let user: User
 
+    @IBOutlet weak private var basicProfileBaseView: UIView!
+
     // MARK: - LifeCycle
 
     required init?(coder: NSCoder) {
@@ -27,8 +29,9 @@ final class ProfileViewController: UIViewController {
         self.navigationItem.title = user.name
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        basicProfileBaseView.layer.cornerRadius = basicProfileBaseView.frame.height * 0.1
     }
 
     // MARK: - Selectors
