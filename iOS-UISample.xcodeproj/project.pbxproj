@@ -11,6 +11,8 @@
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
 		455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BE5F725CE58740067FF06 /* BasicProfileView.swift */; };
 		455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455BE5FA25CE58800067FF06 /* BasicProfileView.xib */; };
+		456C8A3A25CE6E6E005A7D32 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3825CE6E6E005A7D32 /* SampleCollectionViewController.swift */; };
+		456C8A3B25CE6E6E005A7D32 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A3925CE6E6E005A7D32 /* SampleCollectionViewController.xib */; };
 		45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF425B64B6A005E4544 /* AppDelegate.swift */; };
 		45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF625B64B6A005E4544 /* SceneDelegate.swift */; };
 		45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFD25B64B6C005E4544 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		455BE5F725CE58740067FF06 /* BasicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileView.swift; sourceTree = "<group>"; };
 		455BE5FA25CE58800067FF06 /* BasicProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileView.xib; sourceTree = "<group>"; };
+		456C8A3825CE6E6E005A7D32 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		456C8A3925CE6E6E005A7D32 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		45834CF125B64B6A005E4544 /* iOS-UISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UISample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45834CF425B64B6A005E4544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45834CF625B64B6A005E4544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,25 @@
 				76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		456C8A3625CE6E2E005A7D32 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				45834DFE25B7CAA0005E4544 /* SampleTableViewCell.swift */,
+				45834DFF25B7CAA0005E4544 /* SampleTableViewCell.xib */,
+				45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */,
+				452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */,
+				452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		456C8A3725CE6E3F005A7D32 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		45834CE825B64B6A005E4544 = {
@@ -143,11 +166,8 @@
 		45834DED25B7C770005E4544 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45834DFE25B7CAA0005E4544 /* SampleTableViewCell.swift */,
-				45834DFF25B7CAA0005E4544 /* SampleTableViewCell.xib */,
-				45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */,
-				452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */,
-				452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */,
+				456C8A3725CE6E3F005A7D32 /* CollectionView */,
+				456C8A3625CE6E2E005A7D32 /* TableView */,
 				455BE5F725CE58740067FF06 /* BasicProfileView.swift */,
 				455BE5FA25CE58800067FF06 /* BasicProfileView.xib */,
 			);
@@ -158,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
+				456C8A3825CE6E6E005A7D32 /* SampleCollectionViewController.swift */,
+				456C8A3925CE6E6E005A7D32 /* SampleCollectionViewController.xib */,
 				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
 				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
 				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
@@ -255,6 +277,7 @@
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
+				456C8A3B25CE6E6E005A7D32 /* SampleCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +358,7 @@
 				45834DFA25B7CA2A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
+				456C8A3A25CE6E6E005A7D32 /* SampleCollectionViewController.swift in Sources */,
 				45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */,
 				45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */,
 				45834DEA25B7C3C2005E4544 /* UserAPI.swift in Sources */,

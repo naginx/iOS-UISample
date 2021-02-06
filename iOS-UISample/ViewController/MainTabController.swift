@@ -22,9 +22,13 @@ final class MainTabController: UITabBarController {
 
     private func configureViewControllers() {
         let tableVC = SampleTableViewController()
-        let nav1 = templateNavigationController(image: UIImage.named("home_unselected"), rootViewController: tableVC)
+        let nav1 = templateNavigationController(image: UIImage.named("home_unselected"),
+                                                rootViewController: tableVC)
 
-        viewControllers = [nav1]
+        let collectionVC = SampleCollectionViewController()
+        let nav2 = templateNavigationController(image: UIImage.named("search_unselected"),
+                                                rootViewController: collectionVC)
+        viewControllers = [nav1, nav2]
     }
 
     private func templateNavigationController(image: UIImage,
