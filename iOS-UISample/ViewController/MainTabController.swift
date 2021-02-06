@@ -18,10 +18,6 @@ final class MainTabController: UITabBarController {
         configureViewControllers()
     }
 
-    // MARK: - Selectors
-
-    // MARK: - API
-
     // MARK: - Helpers
 
     private func configureViewControllers() {

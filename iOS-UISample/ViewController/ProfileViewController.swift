@@ -13,7 +13,17 @@ final class ProfileViewController: UIViewController {
 
     // MARK: - Properties
 
-    let user: User
+    private let user: User
+
+    // カスタムViewの呼び出しをxib側で行う
+    @IBOutlet weak private var basicProfileView: BasicProfileView! {
+        didSet {
+            // viewに引数を渡して初期化する
+            basicProfileView.configure(user: user)
+
+            basicProfileView.clipsToBounds = true
+        }
+    }
 
     // MARK: - LifeCycle
 
@@ -27,14 +37,8 @@ final class ProfileViewController: UIViewController {
         self.navigationItem.title = user.name
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        basicProfileView.layer.cornerRadius = basicProfileView.frame.height * 0.1
     }
-
-    // MARK: - Selectors
-
-    // MARK: - API
-
-    // MARK: - Helpers
-
 }
