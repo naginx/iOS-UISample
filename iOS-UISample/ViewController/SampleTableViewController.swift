@@ -52,9 +52,7 @@ final class SampleTableViewController: UIViewController {
     private let cellClassName = SampleTableViewCell.identifier
 
     private let api = UserAPI()
-
     private let refreshControl = UIRefreshControl()
-
     private var users = [User]()
 
     // MARK: - LifeCycle
