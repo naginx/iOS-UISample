@@ -25,7 +25,7 @@ final class MainTabController: UITabBarController {
         let nav1 = templateNavigationController(image: UIImage.named("home_unselected"),
                                                 rootViewController: tableVC)
 
-        let collectionVC = SampleCollectionViewController()
+        let collectionVC = UserListViewController()
         let nav2 = templateNavigationController(image: UIImage.named("search_unselected"),
                                                 rootViewController: collectionVC)
         viewControllers = [nav1, nav2]
