@@ -13,16 +13,18 @@ final class UserListViewController: UIViewController {
 
     private let api = UserAPI()
 
-    private lazy var customView: UserListView = {
-        return self.view as! UserListView
-    }()
-
     private var users = [User]() {
         didSet {
             customView.users = users
             customView.refresh()
         }
     }
+
+    private lazy var customView: UserListView = {
+        let cv = self.view as! UserListView
+        cv.delegate = self
+        return cv
+    }()
 
     // MARK: - LifeCycle
 
@@ -32,7 +34,6 @@ final class UserListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.delegate = self
         configureNavigationItem()
         fetchUsers()
     }
@@ -70,6 +71,7 @@ final class UserListViewController: UIViewController {
 extension UserListViewController: UserListViewDelegate {
 
     func userListView(_ view: UserListView, didSelectUser user: User) {
+        // TODO: 遷移処理を切り出す
         let vc = ProfileViewController(user: user)
         navigationController?.pushViewController(vc, animated: true)
     }

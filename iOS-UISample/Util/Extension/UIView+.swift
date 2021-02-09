@@ -9,8 +9,8 @@ import UIKit
 
 extension UIView {
 
-    /// 識別子をクラス名から算出して返せるように
-    static var identifier: String { String(describing: Self.self) }
+    /// クラス名を文字列で返す
+    static var className: String { String(describing: Self.self) }
 
     /// addSubviewを配列でまとめて行うための処理
     func addSubviews(_ views: [UIView]) {
@@ -21,7 +21,7 @@ extension UIView {
 
     /// nibファイルからUIViewの読み込みを行う
     func loadNib() {
-        guard let view = Bundle.main.loadNibNamed(Self.identifier, owner: self, options: nil)?.first as? UIView
+        guard let view = Bundle.main.loadNibNamed(Self.className, owner: self, options: nil)?.first as? UIView
         else { fatalError("Failed to loadNib.") }
         view.frame = self.bounds
         self.addSubview(view)

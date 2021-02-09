@@ -31,7 +31,7 @@ final class UserListView: UIView {
         return refresher
     }()
 
-    private let cellClassName = SampleCollectionViewCell.identifier
+    private let cellClassName = UserCollectionViewCell.className
 
     @IBOutlet weak private var collectionView: UICollectionView! {
         didSet {
@@ -57,7 +57,8 @@ final class UserListView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        configureCellLayout()
+        collectionView.backgroundColor = .lightGray
+        collectionView.makeColumnLayout(column: 3, interMargin: 4, outerMargin: 8, aspectRatio: 1.6)
     }
 
     // MARK: - Helpers
@@ -66,18 +67,6 @@ final class UserListView: UIView {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
-    }
-
-    private func configureCellLayout() {
-        let layout = UICollectionViewFlowLayout()
-        let marginBetweenCells: CGFloat = 1
-        layout.minimumInteritemSpacing = marginBetweenCells
-        layout.minimumLineSpacing = marginBetweenCells
-        let columns = 3
-        let baseCellSize: CGFloat = CGFloat(frame.width / CGFloat(columns))
-        layout.itemSize = CGSize(width: baseCellSize - marginBetweenCells,
-                                 height: baseCellSize - marginBetweenCells)
-        collectionView.collectionViewLayout = layout
     }
 }
 
@@ -101,7 +90,7 @@ extension UserListView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellClassName,
-                                                            for: indexPath) as! SampleCollectionViewCell
+                                                            for: indexPath) as! UserCollectionViewCell
         guard let user = users[safe: indexPath.row] else { return cell }
         cell.configure(user: user)
         return cell

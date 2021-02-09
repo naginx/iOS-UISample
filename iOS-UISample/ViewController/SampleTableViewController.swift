@@ -48,8 +48,8 @@ final class SampleTableViewController: UIViewController {
         postButtonTappedHandler()
     }
 
-    private let headerClassName = SampleTableHeaderView.identifier
-    private let cellClassName = SampleTableViewCell.identifier
+    private let headerClassName = SampleTableHeaderView.className
+    private let cellClassName = SampleTableViewCell.className
 
     private let api = UserAPI()
     private let refreshControl = UIRefreshControl()

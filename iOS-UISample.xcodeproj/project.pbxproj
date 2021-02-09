@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452272B325D0BC61000051A7 /* UICollectionView+.swift */; };
 		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
 		455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BE5F725CE58740067FF06 /* BasicProfileView.swift */; };
 		455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455BE5FA25CE58800067FF06 /* BasicProfileView.xib */; };
 		456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */; };
-		456C8A3F25CE73B1005A7D32 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3D25CE73B1005A7D32 /* SampleCollectionViewCell.swift */; };
-		456C8A4025CE73B1005A7D32 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A3E25CE73B1005A7D32 /* SampleCollectionViewCell.xib */; };
+		456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */; };
+		456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */; };
 		456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A4A25CFC65F005A7D32 /* UserListView.swift */; };
 		456C8A4E25CFC66A005A7D32 /* UserListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A4D25CFC66A005A7D32 /* UserListView.xib */; };
 		45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF425B64B6A005E4544 /* AppDelegate.swift */; };
@@ -38,13 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452272B325D0BC61000051A7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		455BE5F725CE58740067FF06 /* BasicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileView.swift; sourceTree = "<group>"; };
 		455BE5FA25CE58800067FF06 /* BasicProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileView.xib; sourceTree = "<group>"; };
 		456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
-		456C8A3D25CE73B1005A7D32 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
-		456C8A3E25CE73B1005A7D32 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
+		456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		456C8A4A25CFC65F005A7D32 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		456C8A4D25CFC66A005A7D32 /* UserListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListView.xib; sourceTree = "<group>"; };
 		45834CF125B64B6A005E4544 /* iOS-UISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UISample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,8 +109,8 @@
 		456C8A3725CE6E3F005A7D32 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				456C8A3D25CE73B1005A7D32 /* SampleCollectionViewCell.swift */,
-				456C8A3E25CE73B1005A7D32 /* SampleCollectionViewCell.xib */,
+				456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */,
+				456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */,
 				456C8A4A25CFC65F005A7D32 /* UserListView.swift */,
 				456C8A4D25CFC66A005A7D32 /* UserListView.xib */,
 			);
@@ -153,6 +155,7 @@
 				45834E0925B7CE88005E4544 /* Array+.swift */,
 				45834D1A25B65CEA005E4544 /* UIImage+.swift */,
 				45834E0325B7CBAD005E4544 /* UIView+.swift */,
+				452272B325D0BC61000051A7 /* UICollectionView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -285,7 +288,7 @@
 				455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */,
 				452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */,
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
-				456C8A4025CE73B1005A7D32 /* SampleCollectionViewCell.xib in Resources */,
+				456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
 			);
@@ -360,8 +363,9 @@
 			files = (
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
-				456C8A3F25CE73B1005A7D32 /* SampleCollectionViewCell.swift in Sources */,
+				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
+				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,
 				45834DE725B7C1DB005E4544 /* User.swift in Sources */,
 				455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */,
