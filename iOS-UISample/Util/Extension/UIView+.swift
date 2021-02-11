@@ -20,8 +20,10 @@ extension UIView {
     }
 
     /// nibファイルからUIViewの読み込みを行う
+    // 参考: https://qiita.com/takasek/items/3bc284149dcd8aecbf7c
     func loadNib() {
-        guard let view = Bundle.main.loadNibNamed(Self.className, owner: self, options: nil)?.first as? UIView
+        let nib = UINib(nibName: Self.className, bundle: nil)
+        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView
         else { fatalError("Failed to loadNib.") }
         view.frame = self.bounds
         self.addSubview(view)
