@@ -77,14 +77,14 @@ private extension UserAPI {
     },
     {
         "id": 7,
-        "name": "炭治郎",
+        "name": "三郎",
         "age": 43,
         "image": "tasogare_man",
         "message": "寂しいです(泣)"
     },
     {
         "id": 8,
-        "name": "君麻呂",
+        "name": "四郎",
         "age": 28,
         "image": "battou_man",
         "message": "どうも"
