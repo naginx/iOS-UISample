@@ -1,4 +1,6 @@
 PODS:
+  - AgoraRtcEngine_iOS (3.3.1)
+  - AgoraRtm_iOS (1.4.3)
   - EnhancedCircleImageView (0.1)
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
@@ -6,21 +8,27 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - AgoraRtcEngine_iOS
+  - AgoraRtm_iOS
   - EnhancedCircleImageView
   - SDWebImage
   - SnapKit
 
 SPEC REPOS:
   trunk:
+    - AgoraRtcEngine_iOS
+    - AgoraRtm_iOS
     - EnhancedCircleImageView
     - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 17e55feec1bde14adc30fd9d743332d1e7821b62
+  AgoraRtm_iOS: 178257883dd6773d3d26ca51045456c35221b715
   EnhancedCircleImageView: 1069bbc14526d89502cc0e48b45f5da6a3317a47
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 7e53678da875ca85e146200920d193e48e5f89e6
+PODFILE CHECKSUM: 672c697fe33e38103480c5e849e72a35bd8c72db
 
 COCOAPODS: 1.9.2

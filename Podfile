@@ -8,6 +8,8 @@ target 'iOS-UISample' do
   pod 'SDWebImage'
   pod 'SnapKit'
   pod 'EnhancedCircleImageView'
+  pod 'AgoraRtcEngine_iOS'
+  pod 'AgoraRtm_iOS'
 end
 
 post_install do |installer|
