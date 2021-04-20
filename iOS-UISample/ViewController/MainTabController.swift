@@ -28,7 +28,11 @@ final class MainTabController: UITabBarController {
         let collectionVC = UserListViewController()
         let nav2 = templateNavigationController(image: UIImage.named("search_unselected"),
                                                 rootViewController: collectionVC)
-        viewControllers = [nav1, nav2]
+
+        let agoraVC = AgoraViewController()
+        let nav3 = templateNavigationController(image: UIImage.named("search_unselected"),
+                                                rootViewController: agoraVC)
+        viewControllers = [nav1, nav2, nav3]
     }
 
     private func templateNavigationController(image: UIImage,

@@ -3,13 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45118B352609E359005BBAE8 /* AgoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45118B332609E359005BBAE8 /* AgoraViewController.swift */; };
+		45118B362609E359005BBAE8 /* AgoraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45118B342609E359005BBAE8 /* AgoraViewController.xib */; };
+		45118B402609E7C7005BBAE8 /* AgoraRtcKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B3F2609E7C7005BBAE8 /* AgoraRtcKit.xcframework */; };
+		45118B432609E7D4005BBAE8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B422609E7D4005BBAE8 /* Accelerate.framework */; };
+		45118B452609E7DE005BBAE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B442609E7DE005BBAE8 /* SystemConfiguration.framework */; };
+		45118B472609E7EC005BBAE8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B462609E7EC005BBAE8 /* libc++.tbd */; };
+		45118B4A2609E81C005BBAE8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B492609E81C005BBAE8 /* libresolv.tbd */; };
+		45118B4D2609E852005BBAE8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B4C2609E852005BBAE8 /* CoreMedia.framework */; };
+		45118B4F2609E85B005BBAE8 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B4E2609E85B005BBAE8 /* VideoToolbox.framework */; };
+		45118B512609E867005BBAE8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B502609E867005BBAE8 /* AudioToolbox.framework */; };
+		45118B532609E870005BBAE8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B522609E870005BBAE8 /* CoreTelephony.framework */; };
+		45118B552609E878005BBAE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45118B542609E878005BBAE8 /* AVFoundation.framework */; };
 		452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452272B325D0BC61000051A7 /* UICollectionView+.swift */; };
 		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
+		454FB836262962B800C95D22 /* ObjectivecSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454FB834262962B800C95D22 /* ObjectivecSampleViewController.m */; };
+		454FB837262962B800C95D22 /* ObjectivecSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454FB835262962B800C95D22 /* ObjectivecSampleViewController.xib */; };
 		455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BE5F725CE58740067FF06 /* BasicProfileView.swift */; };
 		455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455BE5FA25CE58800067FF06 /* BasicProfileView.xib */; };
 		456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */; };
@@ -39,9 +53,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45118B332609E359005BBAE8 /* AgoraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraViewController.swift; sourceTree = "<group>"; };
+		45118B342609E359005BBAE8 /* AgoraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgoraViewController.xib; sourceTree = "<group>"; };
+		45118B3F2609E7C7005BBAE8 /* AgoraRtcKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraRtcKit.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraRtcKit.xcframework; sourceTree = "<group>"; };
+		45118B422609E7D4005BBAE8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		45118B442609E7DE005BBAE8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		45118B462609E7EC005BBAE8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		45118B492609E81C005BBAE8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		45118B4C2609E852005BBAE8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		45118B4E2609E85B005BBAE8 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		45118B502609E867005BBAE8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		45118B522609E870005BBAE8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		45118B542609E878005BBAE8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		452272B325D0BC61000051A7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		454FB832262962B800C95D22 /* iOS-UISample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-UISample-Bridging-Header.h"; sourceTree = "<group>"; };
+		454FB833262962B800C95D22 /* ObjectivecSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectivecSampleViewController.h; sourceTree = "<group>"; };
+		454FB834262962B800C95D22 /* ObjectivecSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectivecSampleViewController.m; sourceTree = "<group>"; };
+		454FB835262962B800C95D22 /* ObjectivecSampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectivecSampleViewController.xib; sourceTree = "<group>"; };
 		455BE5F725CE58740067FF06 /* BasicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileView.swift; sourceTree = "<group>"; };
 		455BE5FA25CE58800067FF06 /* BasicProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileView.xib; sourceTree = "<group>"; };
 		456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +109,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45118B552609E878005BBAE8 /* AVFoundation.framework in Frameworks */,
+				45118B532609E870005BBAE8 /* CoreTelephony.framework in Frameworks */,
+				45118B512609E867005BBAE8 /* AudioToolbox.framework in Frameworks */,
+				45118B4F2609E85B005BBAE8 /* VideoToolbox.framework in Frameworks */,
+				45118B4D2609E852005BBAE8 /* CoreMedia.framework in Frameworks */,
+				45118B4A2609E81C005BBAE8 /* libresolv.tbd in Frameworks */,
+				45118B472609E7EC005BBAE8 /* libc++.tbd in Frameworks */,
+				45118B452609E7DE005BBAE8 /* SystemConfiguration.framework in Frameworks */,
+				45118B432609E7D4005BBAE8 /* Accelerate.framework in Frameworks */,
+				45118B402609E7C7005BBAE8 /* AgoraRtcKit.xcframework in Frameworks */,
 				B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +129,16 @@
 		3F009FFAB5AFBBE26A468D46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45118B542609E878005BBAE8 /* AVFoundation.framework */,
+				45118B522609E870005BBAE8 /* CoreTelephony.framework */,
+				45118B502609E867005BBAE8 /* AudioToolbox.framework */,
+				45118B4E2609E85B005BBAE8 /* VideoToolbox.framework */,
+				45118B4C2609E852005BBAE8 /* CoreMedia.framework */,
+				45118B492609E81C005BBAE8 /* libresolv.tbd */,
+				45118B462609E7EC005BBAE8 /* libc++.tbd */,
+				45118B442609E7DE005BBAE8 /* SystemConfiguration.framework */,
+				45118B422609E7D4005BBAE8 /* Accelerate.framework */,
+				45118B3F2609E7C7005BBAE8 /* AgoraRtcKit.xcframework */,
 				76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */,
 			);
 			name = Frameworks;
@@ -192,10 +242,16 @@
 			children = (
 				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
 				456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */,
+				45118B332609E359005BBAE8 /* AgoraViewController.swift */,
+				45118B342609E359005BBAE8 /* AgoraViewController.xib */,
 				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
 				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
 				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
 				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
+				454FB833262962B800C95D22 /* ObjectivecSampleViewController.h */,
+				454FB834262962B800C95D22 /* ObjectivecSampleViewController.m */,
+				454FB835262962B800C95D22 /* ObjectivecSampleViewController.xib */,
+				454FB832262962B800C95D22 /* iOS-UISample-Bridging-Header.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -229,6 +285,7 @@
 			buildConfigurationList = 45834D0525B64B6C005E4544 /* Build configuration list for PBXNativeTarget "iOS-UISample" */;
 			buildPhases = (
 				19B6B929DE23A9088647B9CE /* [CP] Check Pods Manifest.lock */,
+				96F60BB953496EF24B79207B /* [CP] Prepare Artifacts */,
 				45834CED25B64B6A005E4544 /* Sources */,
 				45834CEE25B64B6A005E4544 /* Frameworks */,
 				45834CEF25B64B6A005E4544 /* Resources */,
@@ -255,6 +312,7 @@
 				TargetAttributes = {
 					45834CF025B64B6A005E4544 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -289,7 +347,9 @@
 				452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */,
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
 				456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */,
+				45118B362609E359005BBAE8 /* AgoraViewController.xib in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
+				454FB837262962B800C95D22 /* ObjectivecSampleViewController.xib in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +414,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		96F60BB953496EF24B79207B /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -363,6 +440,7 @@
 			files = (
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
+				45118B352609E359005BBAE8 /* AgoraViewController.swift in Sources */,
 				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
 				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
@@ -372,6 +450,7 @@
 				45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */,
 				45834DFA25B7CA2A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
+				454FB836262962B800C95D22 /* ObjectivecSampleViewController.m in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
 				456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */,
 				456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */,
@@ -518,7 +597,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H5PRS5GJRM;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"AGORA_SDK_BOTH_RTM_AND_RTC=1",
+				);
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,6 +614,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nagisa.iOS-UISample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-UISample/ViewController/iOS-UISample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -538,7 +627,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H5PRS5GJRM;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nagisa.iOS-UISample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-UISample/ViewController/iOS-UISample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
