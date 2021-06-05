@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30790AEF266AE8160033B488 /* ChatViewController.swift */; };
+		30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30790AF0266AE8160033B488 /* ChatViewController.xib */; };
 		452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452272B325D0BC61000051A7 /* UICollectionView+.swift */; };
 		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30790AEF266AE8160033B488 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		30790AF0266AE8160033B488 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		452272B325D0BC61000051A7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
 				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
 				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
+				30790AEF266AE8160033B488 /* ChatViewController.swift */,
+				30790AF0266AE8160033B488 /* ChatViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */,
 				45834E0125B7CAA0005E4544 /* SampleTableViewCell.xib in Resources */,
 				455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */,
+				30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */,
 				452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */,
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
 				456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */,
@@ -352,7 +359,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -372,6 +379,7 @@
 				45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */,
 				45834DFA25B7CA2A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
+				30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
 				456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */,
 				456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */,
@@ -519,6 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29X95D42VV;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,6 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29X95D42VV;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

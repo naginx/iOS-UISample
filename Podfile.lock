@@ -1,5 +1,11 @@
 PODS:
   - EnhancedCircleImageView (0.1)
+  - FontAwesome.swift (1.9.1)
+  - InputBarAccessoryView (5.3.1):
+    - InputBarAccessoryView/Core (= 5.3.1)
+  - InputBarAccessoryView/Core (5.3.1)
+  - MessageKit (3.6.1):
+    - InputBarAccessoryView (~> 5.3.1)
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
@@ -7,20 +13,28 @@ PODS:
 
 DEPENDENCIES:
   - EnhancedCircleImageView
+  - FontAwesome.swift
+  - MessageKit
   - SDWebImage
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - EnhancedCircleImageView
+    - FontAwesome.swift
+    - InputBarAccessoryView
+    - MessageKit
     - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
   EnhancedCircleImageView: 1069bbc14526d89502cc0e48b45f5da6a3317a47
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  InputBarAccessoryView: 1f75d8c9f75e5e57f3ffac36ed58635a8005e0bc
+  MessageKit: d153fbbbcb12f3f4045a1ba8874298924dacfb62
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 7e53678da875ca85e146200920d193e48e5f89e6
+PODFILE CHECKSUM: cde0a92204318bf086d2310f6418ac846223b4c0
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.10.1

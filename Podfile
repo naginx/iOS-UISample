@@ -5,9 +5,11 @@ target 'iOS-UISample' do
   use_frameworks!
 
   # Pods for iOS-UISample
+  pod 'EnhancedCircleImageView'
+  pod 'FontAwesome.swift'
+  pod 'MessageKit'
   pod 'SDWebImage'
   pod 'SnapKit'
-  pod 'EnhancedCircleImageView'
 end
 
 post_install do |installer|
