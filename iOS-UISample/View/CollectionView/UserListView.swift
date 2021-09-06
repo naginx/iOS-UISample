@@ -90,7 +90,7 @@ extension UserListView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellClassName,
-                                                            for: indexPath) as! UserCollectionViewCell
+                                                      for: indexPath) as! UserCollectionViewCell
         guard let user = users[safe: indexPath.row] else { return cell }
         cell.configure(user: user)
         return cell

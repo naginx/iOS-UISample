@@ -37,6 +37,9 @@
 		45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */; };
 		45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA657625C68E91006802F4 /* ProfileViewController.swift */; };
 		45AA657925C68E91006802F4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AA657725C68E91006802F4 /* ProfileViewController.xib */; };
+		45BD0B0F26E5D38B009AC005 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */; };
+		45BD0B1026E5D38B009AC005 /* ReverseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */; };
+		45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0B1126E5D492009AC005 /* UITableView+.swift */; };
 		B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderView.swift; sourceTree = "<group>"; };
 		45AA657625C68E91006802F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		45AA657725C68E91006802F4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTableViewController.swift; sourceTree = "<group>"; };
+		45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReverseTableViewController.xib; sourceTree = "<group>"; };
+		45BD0B1126E5D492009AC005 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_UISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.release.xcconfig"; sourceTree = "<group>"; };
 		9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				45834D1A25B65CEA005E4544 /* UIImage+.swift */,
 				45834E0325B7CBAD005E4544 /* UIView+.swift */,
 				452272B325D0BC61000051A7 /* UICollectionView+.swift */,
+				45BD0B1126E5D492009AC005 /* UITableView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
 				30790AEF266AE8160033B488 /* ChatViewController.swift */,
 				30790AF0266AE8160033B488 /* ChatViewController.xib */,
+				45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */,
+				45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
 				456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
+				45BD0B1026E5D38B009AC005 /* ReverseTableViewController.xib in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +381,7 @@
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
 				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
+				45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
 				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,
@@ -380,6 +391,7 @@
 				45834DFA25B7CA2A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
 				30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */,
+				45BD0B0F26E5D38B009AC005 /* ReverseTableViewController.swift in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
 				456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */,
 				456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */,
@@ -527,7 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29X95D42VV;
+				DEVELOPMENT_TEAM = 2Q4Y8X7U8H;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -548,7 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29X95D42VV;
+				DEVELOPMENT_TEAM = 2Q4Y8X7U8H;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,6 +10,7 @@ target 'iOS-UISample' do
   pod 'MessageKit'
   pod 'SDWebImage'
   pod 'SnapKit'
+  pod "ReverseExtension"
 end
 
 post_install do |installer|

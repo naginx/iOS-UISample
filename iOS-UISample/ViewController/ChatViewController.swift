@@ -5,8 +5,8 @@
 //  Created by nagisa miura on 2021/06/05.
 //
 
-import MessageKit
 import InputBarAccessoryView
+import MessageKit
 import UIKit
 
 struct Sender: SenderType {
@@ -120,7 +120,7 @@ extension ChatViewController: MessagesDisplayDelegate {
 
     func backgroundColor(for message: MessageType, at indexPath: IndexPath,
                          in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? UIColor(red: 69/255, green: 193/255, blue: 89/255, alpha: 1) : UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        return isFromCurrentSender(message: message) ? UIColor(red: 69 / 255, green: 193 / 255, blue: 89 / 255, alpha: 1) : UIColor(red: 230 / 255, green: 230 / 255, blue: 230 / 255, alpha: 1)
     }
 
     func messageStyle(for message: MessageType, at indexPath: IndexPath,
