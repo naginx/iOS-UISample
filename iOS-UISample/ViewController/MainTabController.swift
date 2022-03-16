@@ -21,7 +21,7 @@ final class MainTabController: UITabBarController {
     // MARK: - Helpers
 
     private func configureViewControllers() {
-        let tableVC = ReverseTableViewController()
+        let tableVC = DiffableTableViewController()
         let nav1 = templateNavigationController(image: UIImage.named("home_unselected"),
                                                 rootViewController: tableVC)
 
