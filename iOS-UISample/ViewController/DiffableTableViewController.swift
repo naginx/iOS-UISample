@@ -37,7 +37,7 @@ final class DiffableTableViewController: UIViewController {
         dataSource.apply(snapshot)
     }
 
-    var fruits: [Fruit] = [
+    private var fruits: [Fruit] = [
         Fruit(name: "バナナ", isFavorite: false),
         Fruit(name: "りんご", isFavorite: true),
         Fruit(name: "メロン", isFavorite: false),
@@ -54,14 +54,16 @@ final class DiffableTableViewController: UIViewController {
         tableView.delegate = self
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(fruits, toSection: .list)
+        snapshot.appendItems([Fruit(name: "ボタン", isFavorite: true)], toSection: .button)
         dataSource.apply(snapshot)
         return nil
     }()
 
     // MARK: DiffableDataSource
 
-    private enum Section: CaseIterable {
-        case list, button
+    private enum Section: Int, CaseIterable {
+        case list
+        case button
     }
 
     private lazy var dataSource: UITableViewDiffableDataSource<Section, Fruit> = {
@@ -73,9 +75,17 @@ final class DiffableTableViewController: UIViewController {
     private lazy var snapshot = NSDiffableDataSourceSnapshot<Section, Fruit>()
 
     private func cellProvider(tableView: UITableView, indexPath: IndexPath, fruit: Fruit) -> UITableViewCell? {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = fruit.name + " / \(indexPath.row)"
-        return cell
+        guard let section = Section(rawValue: indexPath.section) else { return nil }
+        switch section {
+        case .list:
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            cell.textLabel?.text = fruit.name + " / \(indexPath.row)"
+            return cell
+        case .button:
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            cell.textLabel?.text = fruit.name
+            return cell
+        }
     }
 }
 
