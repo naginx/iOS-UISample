@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Fruit: Equatable {
+struct Fruit: Hashable {
 
     let id: UUID
     var name: String
@@ -18,14 +18,23 @@ struct Fruit: Equatable {
         self.name = name
         self.isFavorite = isFavorite
     }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 final class DiffableTableViewController: UIViewController {
 
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet {
-            tableView.delegate = self
-        }
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var createButton: UIButton!
+    @IBOutlet private weak var fetchButton: UIButton!
+
+    @IBAction private func tappedCreateButton(_ sender: UIButton) {
+        let grape = Fruit(name: "ぶどう", isFavorite: false)
+        fruits.append(grape)
+        snapshot.appendItems([grape], toSection: .list)
+        dataSource.apply(snapshot)
     }
 
     var fruits: [Fruit] = [
@@ -42,9 +51,10 @@ final class DiffableTableViewController: UIViewController {
     }
 
     private lazy var _setup: (() -> Void)? = {
+        tableView.delegate = self
         snapshot.appendSections(Section.allCases)
-        snapshot.appendItems(items, toSection: .list)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        snapshot.appendItems(fruits, toSection: .list)
+        dataSource.apply(snapshot)
         return nil
     }()
 
@@ -54,37 +64,29 @@ final class DiffableTableViewController: UIViewController {
         case list, button
     }
 
-    private struct Item: Hashable {
-        let fruitId: UUID
-    }
-
-    private var items: [Item] {
-        fruits.sorted(by: { $0.name < $1.name })
-            .map({ Item(fruitId:  $0.id )})
-    }
-
-    private lazy var dataSource: UITableViewDiffableDataSource<Section, Item> = {
-        let dataSource = UITableViewDiffableDataSource<Section, Item>(tableView: tableView, cellProvider: cellProvider)
+    private lazy var dataSource: UITableViewDiffableDataSource<Section, Fruit> = {
+        let dataSource = UITableViewDiffableDataSource<Section, Fruit>(tableView: tableView, cellProvider: cellProvider)
         dataSource.defaultRowAnimation = .fade
         return dataSource
     }()
 
-    private lazy var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+    private lazy var snapshot = NSDiffableDataSourceSnapshot<Section, Fruit>()
 
-    private func cellProvider(tableView: UITableView, indexPath: IndexPath, item: Item) -> UITableViewCell? {
+    private func cellProvider(tableView: UITableView, indexPath: IndexPath, fruit: Fruit) -> UITableViewCell? {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        let id = items[indexPath.row].fruitId
-        let fruit = fruits.first(where: { $0.id == id })
-        cell.textLabel?.text = fruit?.name
+        cell.textLabel?.text = fruit.name + " / \(indexPath.row)"
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension DiffableTableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = items[indexPath.row]
-        snapshot.deleteItems([item])
+        let fruit = fruits[indexPath.row]
+        fruits.remove(at: indexPath.row)
+        snapshot.deleteItems([fruit])
         dataSource.apply(snapshot)
     }
 }

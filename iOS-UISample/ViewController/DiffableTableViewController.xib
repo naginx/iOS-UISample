@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiffableTableViewController" customModule="iOS_UISample" customModuleProvider="target">
             <connections>
+                <outlet property="createButton" destination="odi-oi-pTQ" id="cFu-ar-eFr"/>
+                <outlet property="fetchButton" destination="2Gq-rn-7Iw" id="MbJ-ov-VQO"/>
                 <outlet property="tableView" destination="537-aZ-gHO" id="w3H-HA-Mx2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,19 +23,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="537-aZ-gHO">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHX-EI-6oJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odi-oi-pTQ">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="作成"/>
+                            <connections>
+                                <action selector="tappedCreateButton:" destination="-1" eventType="touchUpInside" id="3oL-aH-XcO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gq-rn-7Iw">
+                            <rect key="frame" x="207" y="0.0" width="207" height="100"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="更新"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="x98-2W-2Tm"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rHX-EI-6oJ" secondAttribute="trailing" id="2YQ-2V-Gdc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="537-aZ-gHO" secondAttribute="bottom" id="48h-aU-RGH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="537-aZ-gHO" secondAttribute="trailing" id="6Fu-Fv-uzT"/>
                 <constraint firstItem="537-aZ-gHO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TlO-22-BzH"/>
-                <constraint firstItem="537-aZ-gHO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hYx-Qw-mEo"/>
+                <constraint firstItem="rHX-EI-6oJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="btr-Jk-QIi"/>
+                <constraint firstItem="537-aZ-gHO" firstAttribute="top" secondItem="rHX-EI-6oJ" secondAttribute="bottom" id="ona-hH-qWs"/>
+                <constraint firstItem="rHX-EI-6oJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sSW-y6-XWC"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="140"/>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
         </view>
     </objects>
     <resources>
