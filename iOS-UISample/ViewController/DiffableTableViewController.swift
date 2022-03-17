@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// 参考: https://techlife.cookpad.com/entry/2020/12/24/130000
+
 struct Fruit: Hashable {
 
     let id: UUID
@@ -31,9 +33,13 @@ final class DiffableTableViewController: UIViewController {
     @IBOutlet private weak var fetchButton: UIButton!
 
     @IBAction private func tappedCreateButton(_ sender: UIButton) {
+        createNewFruit()
+    }
+
+    private func createNewFruit() {
         let grape = Fruit(name: "ぶどう", isFavorite: false)
         fruits.append(grape)
-        snapshot.appendItems([grape], toSection: .list)
+        snapshot.appendItems([.list(fruit: grape)], toSection: .list)
         dataSource.apply(snapshot)
     }
 
@@ -53,8 +59,9 @@ final class DiffableTableViewController: UIViewController {
     private lazy var _setup: (() -> Void)? = {
         tableView.delegate = self
         snapshot.appendSections(Section.allCases)
-        snapshot.appendItems(fruits, toSection: .list)
-        snapshot.appendItems([Fruit(name: "ボタン", isFavorite: true)], toSection: .button)
+        let fruitItems = fruits.map({ Item.list(fruit: $0) })
+        snapshot.appendItems(fruitItems, toSection: .list)
+        snapshot.appendItems([.button], toSection: .button)
         dataSource.apply(snapshot)
         return nil
     }()
@@ -66,24 +73,28 @@ final class DiffableTableViewController: UIViewController {
         case button
     }
 
-    private lazy var dataSource: UITableViewDiffableDataSource<Section, Fruit> = {
-        let dataSource = UITableViewDiffableDataSource<Section, Fruit>(tableView: tableView, cellProvider: cellProvider)
+    private enum Item: Hashable {
+        case list(fruit: Fruit)
+        case button
+    }
+
+    private lazy var dataSource: UITableViewDiffableDataSource<Section, Item> = {
+        let dataSource = UITableViewDiffableDataSource<Section, Item>(tableView: tableView, cellProvider: cellProvider)
         dataSource.defaultRowAnimation = .fade
         return dataSource
     }()
 
-    private lazy var snapshot = NSDiffableDataSourceSnapshot<Section, Fruit>()
+    private lazy var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
 
-    private func cellProvider(tableView: UITableView, indexPath: IndexPath, fruit: Fruit) -> UITableViewCell? {
-        guard let section = Section(rawValue: indexPath.section) else { return nil }
-        switch section {
-        case .list:
+    private func cellProvider(tableView: UITableView, indexPath: IndexPath, item: Item) -> UITableViewCell? {
+        switch item {
+        case .list(let fruit):
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
             cell.textLabel?.text = fruit.name + " / \(indexPath.row)"
             return cell
         case .button:
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-            cell.textLabel?.text = fruit.name
+            cell.textLabel?.text = "ボタン"
             return cell
         }
     }
@@ -94,9 +105,16 @@ final class DiffableTableViewController: UIViewController {
 extension DiffableTableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let fruit = fruits[indexPath.row]
-        fruits.remove(at: indexPath.row)
-        snapshot.deleteItems([fruit])
-        dataSource.apply(snapshot)
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        switch section {
+        case .list:
+            // TODO: 削除の処理をiOSの赤ボタン出る方法に変える
+            let fruit = fruits[indexPath.row]
+            fruits.remove(at: indexPath.row)
+            snapshot.deleteItems([.list(fruit: fruit)])
+            dataSource.apply(snapshot)
+        case .button:
+            createNewFruit()
+        }
     }
 }
