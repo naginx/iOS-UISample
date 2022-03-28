@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiffableTableViewController" customModule="iOS_UISample" customModuleProvider="target">
             <connections>
                 <outlet property="createButton" destination="odi-oi-pTQ" id="cFu-ar-eFr"/>
-                <outlet property="fetchButton" destination="2Gq-rn-7Iw" id="MbJ-ov-VQO"/>
+                <outlet property="deleteButton" destination="2Gq-rn-7Iw" id="MbJ-ov-VQO"/>
                 <outlet property="tableView" destination="537-aZ-gHO" id="w3H-HA-Mx2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,7 +40,10 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gq-rn-7Iw">
                             <rect key="frame" x="207" y="0.0" width="207" height="100"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="更新"/>
+                            <buttonConfiguration key="configuration" style="plain" title="削除"/>
+                            <connections>
+                                <action selector="tappedDeleteButton:" destination="-1" eventType="touchUpInside" id="dyW-j4-NLx"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

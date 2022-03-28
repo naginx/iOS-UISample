@@ -41,6 +41,7 @@
 		45BD0B1026E5D38B009AC005 /* ReverseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */; };
 		45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0B1126E5D492009AC005 /* UITableView+.swift */; };
 		B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */; };
+		EF33BA6D27F1573500A9C9C5 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */; };
 		EF3C3EA327C33F3300707312 /* ScrollableStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */; };
 		EF3C3EA427C33F3300707312 /* ScrollableStackViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */; };
 		EF618F8F27E02CDF00E24D96 /* DiffableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */; };
@@ -86,6 +87,7 @@
 		76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_UISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.release.xcconfig"; sourceTree = "<group>"; };
 		9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.debug.xcconfig"; sourceTree = "<group>"; };
+		EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
 		EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewViewController.swift; sourceTree = "<group>"; };
 		EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollableStackViewViewController.xib; sourceTree = "<group>"; };
 		EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */,
 				EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */,
 				EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */,
+				EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */,
 				EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */,
 			);
 			path = ViewController;
@@ -414,6 +417,7 @@
 				45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */,
 				45834DEA25B7C3C2005E4544 /* UserAPI.swift in Sources */,
 				45834E0A25B7CE88005E4544 /* Array+.swift in Sources */,
+				EF33BA6D27F1573500A9C9C5 /* SampleDataSource.swift in Sources */,
 				EF3C3EA327C33F3300707312 /* ScrollableStackViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
