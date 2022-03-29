@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol SampleDataSourceProtocol: NSObject {
+protocol SampleDataSourceDelegate: AnyObject {
     func didSelectDelete(_ dataSource: SampleDataSource, indexPath: IndexPath)
 }
 
 final class SampleDataSource: UITableViewDiffableDataSource<SampleSection, SampleItem> {
 
-    weak var delegate: SampleDataSourceProtocol?
+    weak var delegate: SampleDataSourceDelegate?
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         guard let section = SampleSection(rawValue: indexPath.section) else { return false }
@@ -46,4 +46,13 @@ enum SampleSection: Int, CaseIterable {
 enum SampleItem: Hashable {
     case list(fruit: Fruit)
     case button
+
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .list(let fruit):
+            hasher.combine(fruit.id)
+        case .button:
+            break
+        }
+    }
 }

@@ -71,7 +71,6 @@ final class DiffableTableViewController: UIViewController {
 
     // MARK: DiffableDataSource
 
-
     private lazy var dataSource: SampleDataSource = {
         let dataSource = SampleDataSource(tableView: tableView, cellProvider: cellProvider)
         dataSource.delegate = self
@@ -94,7 +93,7 @@ final class DiffableTableViewController: UIViewController {
     }
 }
 
-extension DiffableTableViewController: SampleDataSourceProtocol {
+extension DiffableTableViewController: SampleDataSourceDelegate {
     func didSelectDelete(_ dataSource: SampleDataSource, indexPath: IndexPath) {
         guard let section = SampleSection(rawValue: indexPath.section) else { return }
         switch section {
