@@ -44,6 +44,7 @@
 		EF33BA6D27F1573500A9C9C5 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */; };
 		EF3C3EA327C33F3300707312 /* ScrollableStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */; };
 		EF3C3EA427C33F3300707312 /* ScrollableStackViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */; };
+		EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5B4B8827F4297B004A4B8B /* Fruit.swift */; };
 		EF618F8F27E02CDF00E24D96 /* DiffableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */; };
 		EF618F9027E02CDF00E24D96 /* DiffableTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
 		EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewViewController.swift; sourceTree = "<group>"; };
 		EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollableStackViewViewController.xib; sourceTree = "<group>"; };
+		EF5B4B8827F4297B004A4B8B /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewController.swift; sourceTree = "<group>"; };
 		EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiffableTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 		45834DE425B7C138005E4544 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF5B4B8827F4297B004A4B8B /* Fruit.swift */,
 				45834DE625B7C1DB005E4544 /* User.swift */,
 			);
 			path = Model;
@@ -211,21 +214,21 @@
 		45834DEE25B7C777005E4544 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
-				456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */,
-				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
-				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
-				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
-				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
 				30790AEF266AE8160033B488 /* ChatViewController.swift */,
 				30790AF0266AE8160033B488 /* ChatViewController.xib */,
+				EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */,
+				EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */,
+				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
+				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
+				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
 				45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */,
 				45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */,
+				EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */,
+				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
+				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
 				EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */,
 				EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */,
-				EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */,
-				EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */,
-				EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */,
+				456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
 				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
 				45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */,
+				EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
 				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,

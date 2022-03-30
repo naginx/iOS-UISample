@@ -7,6 +7,40 @@
 
 import UIKit
 
+enum SampleSection: Hashable, Equatable {
+    case itemSection(row: SampleItem)
+    case button
+
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .itemSection(let row):
+            hasher.combine(row.hashValue)
+        case .button:
+            break
+        }
+    }
+
+}
+
+enum SampleItem: Hashable, Equatable {
+    case itemRow(fruit: Fruit)
+    case button
+
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .itemRow(let fruit):
+            hasher.combine(fruit.uuid)
+        case .button:
+            break
+        }
+    }
+
+    static func ==(lhs: SampleItem, rhs: SampleItem) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+}
+
+
 protocol SampleDataSourceDelegate: AnyObject {
     func didSelectDelete(_ dataSource: SampleDataSource, indexPath: IndexPath)
 }
@@ -15,10 +49,18 @@ final class SampleDataSource: UITableViewDiffableDataSource<SampleSection, Sampl
 
     weak var delegate: SampleDataSourceDelegate?
 
+    private var viewModel: DiffableTableViewModel
+
+    init(viewModel: DiffableTableViewModel, tableView: UITableView,
+         cellProvider: @escaping UITableViewDiffableDataSource<SampleSection, SampleItem>.CellProvider) {
+        self.viewModel = viewModel
+        super.init(tableView: tableView, cellProvider: cellProvider)
+    }
+
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        guard let section = SampleSection(rawValue: indexPath.section) else { return false }
+        let section = viewModel.sectionList[indexPath.section]
         switch section {
-        case .list:
+        case .itemSection:
             return true
         case .button:
             return false
@@ -26,32 +68,21 @@ final class SampleDataSource: UITableViewDiffableDataSource<SampleSection, Sampl
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard let section = SampleSection(rawValue: indexPath.section) else { return }
-        switch section {
-        case .list:
-            if editingStyle == .delete {
+        switch editingStyle {
+        case .delete:
+            let section = viewModel.sectionList[indexPath.section]
+            switch section {
+            case .itemSection:
                 delegate?.didSelectDelete(self, indexPath: indexPath)
+                break
+            case .button:
+                break
             }
-        case .button:
+        case .insert:
             break
-        }
-    }
-}
-
-enum SampleSection: Int, CaseIterable {
-    case list
-    case button
-}
-
-enum SampleItem: Hashable {
-    case list(fruit: Fruit)
-    case button
-
-    func hash(into hasher: inout Hasher) {
-        switch self {
-        case .list(let fruit):
-            hasher.combine(fruit.id)
-        case .button:
+        case .none:
+            break
+        @unknown default:
             break
         }
     }

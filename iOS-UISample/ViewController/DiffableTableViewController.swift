@@ -7,24 +7,23 @@
 
 import UIKit
 
-/// 参考: https://techlife.cookpad.com/entry/2020/12/24/130000
+final class DiffableTableViewModel {
 
-struct Fruit: Hashable {
+    var fruits: [Fruit] = [
+        Fruit(name: "バナナ", isFavorite: false),
+        Fruit(name: "りんご", isFavorite: true),
+        Fruit(name: "メロン", isFavorite: false),
+    ]
 
-    let id: UUID
-    var name: String
-    var isFavorite: Bool
-
-    init(name: String, isFavorite: Bool) {
-        self.id = UUID()
-        self.name = name
-        self.isFavorite = isFavorite
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+    var sectionList: [SampleSection] {
+        var list = fruits.map({
+            SampleSection.itemSection(row: .itemRow(fruit: $0))
+        })
+        list.append(SampleSection.button)
+        return list
     }
 }
+
 
 final class DiffableTableViewController: UIViewController {
 
@@ -40,18 +39,17 @@ final class DiffableTableViewController: UIViewController {
         tableView.setEditing(!tableView.isEditing, animated: true)
     }
 
+    private let viewModel = DiffableTableViewModel()
+
     private func createNewFruit() {
         let grape = Fruit(name: "ぶどう", isFavorite: false)
-        fruits.append(grape)
-        snapshot.appendItems([.list(fruit: grape)], toSection: .list)
+        viewModel.fruits.append(grape)
+        let row = SampleItem.itemRow(fruit: grape)
+        let section = SampleSection.itemSection(row: row)
+        snapshot.insertSections([section], beforeSection: .button)
+        snapshot.appendItems([row], toSection: section)
         dataSource.apply(snapshot)
     }
-
-    private var fruits: [Fruit] = [
-        Fruit(name: "バナナ", isFavorite: false),
-        Fruit(name: "りんご", isFavorite: true),
-        Fruit(name: "メロン", isFavorite: false),
-    ]
 
     // MARK: LifeCycle / Setup
 
@@ -61,9 +59,12 @@ final class DiffableTableViewController: UIViewController {
     }
 
     private lazy var _setup: (() -> Void)? = {
-        snapshot.appendSections(SampleSection.allCases)
-        let fruitItems = fruits.map({ SampleItem.list(fruit: $0) })
-        snapshot.appendItems(fruitItems, toSection: .list)
+        tableView.delegate = self
+        snapshot.appendSections(viewModel.sectionList)
+        for fruit in viewModel.fruits {
+            let row = SampleItem.itemRow(fruit: fruit)
+            snapshot.appendItems([row], toSection: .itemSection(row: row))
+        }
         snapshot.appendItems([.button], toSection: .button)
         dataSource.apply(snapshot)
         return nil
@@ -72,7 +73,8 @@ final class DiffableTableViewController: UIViewController {
     // MARK: DiffableDataSource
 
     private lazy var dataSource: SampleDataSource = {
-        let dataSource = SampleDataSource(tableView: tableView, cellProvider: cellProvider)
+        let dataSource = SampleDataSource(viewModel: viewModel, tableView: tableView, cellProvider: cellProvider)
+        dataSource.defaultRowAnimation = .fade
         dataSource.delegate = self
         return dataSource
     }()
@@ -81,7 +83,7 @@ final class DiffableTableViewController: UIViewController {
 
     private func cellProvider(tableView: UITableView, indexPath: IndexPath, item: SampleItem) -> UITableViewCell? {
         switch item {
-        case .list(let fruit):
+        case .itemRow(let fruit):
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
             cell.textLabel?.text = fruit.name + " / \(indexPath.row)"
             return cell
@@ -93,17 +95,23 @@ final class DiffableTableViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension DiffableTableViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+}
+
+// MARK: - SampleDataSourceDelegate
+
 extension DiffableTableViewController: SampleDataSourceDelegate {
+
     func didSelectDelete(_ dataSource: SampleDataSource, indexPath: IndexPath) {
-        guard let section = SampleSection(rawValue: indexPath.section) else { return }
-        switch section {
-        case .list:
-            let fruit = fruits[indexPath.row]
-            fruits.remove(at: indexPath.row)
-            snapshot.deleteItems([.list(fruit: fruit)])
-            dataSource.apply(snapshot)
-        case .button:
-            break
-        }
+        let fruit = viewModel.fruits[indexPath.section]
+        viewModel.fruits.remove(at: indexPath.section)
+        snapshot.deleteSections([.itemSection(row: .itemRow(fruit: fruit))])
+        dataSource.apply(snapshot)
     }
 }
