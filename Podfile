@@ -3,6 +3,7 @@ platform :ios, '13.0'
 
 target 'iOS-UISample' do
   use_frameworks!
+  inhibit_all_warnings!
 
   # Pods for iOS-UISample
   pod 'EnhancedCircleImageView'
