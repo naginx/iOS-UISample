@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30414AF229FE01650078931E /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF029FE01650078931E /* CounterViewController.swift */; };
+		30414AF329FE01650078931E /* CounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30414AF129FE01650078931E /* CounterViewController.xib */; };
 		30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30790AEF266AE8160033B488 /* ChatViewController.swift */; };
 		30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30790AF0266AE8160033B488 /* ChatViewController.xib */; };
 		30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30414AF029FE01650078931E /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		30414AF129FE01650078931E /* CounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterViewController.xib; sourceTree = "<group>"; };
 		30790AEF266AE8160033B488 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		30790AF0266AE8160033B488 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UISampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +263,8 @@
 				EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */,
 				EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */,
 				456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */,
+				30414AF029FE01650078931E /* CounterViewController.swift */,
+				30414AF129FE01650078931E /* CounterViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30414AF329FE01650078931E /* CounterViewController.xib in Resources */,
 				456C8A4E25CFC66A005A7D32 /* UserListView.xib in Resources */,
 				45AA657925C68E91006802F4 /* ProfileViewController.xib in Resources */,
 				45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */,
@@ -436,6 +443,7 @@
 		};
 		45834D0C25B64CB3005E4544 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -474,6 +482,7 @@
 				45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */,
 				EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
+				30414AF229FE01650078931E /* CounterViewController.swift in Sources */,
 				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,
 				45834DE725B7C1DB005E4544 /* User.swift in Sources */,
