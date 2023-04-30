@@ -3,12 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0877D69FAECDB1FF1F5A4A87 /* libPods-iOS-UISampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8DCCC5D78F731590333442 /* libPods-iOS-UISampleTests.a */; };
+		30414AF229FE01650078931E /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF029FE01650078931E /* CounterViewController.swift */; };
+		30414AF329FE01650078931E /* CounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30414AF129FE01650078931E /* CounterViewController.xib */; };
+		30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF429FE072E0078931E /* CounterViewControllerTests.swift */; };
+		30414AF729FE0C800078931E /* CounterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF629FE0C800078931E /* CounterViewControllerSpec.swift */; };
+		30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30790AEF266AE8160033B488 /* ChatViewController.swift */; };
+		30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30790AF0266AE8160033B488 /* ChatViewController.xib */; };
+		30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */; };
+		452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452272B325D0BC61000051A7 /* UICollectionView+.swift */; };
 		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
+		455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BE5F725CE58740067FF06 /* BasicProfileView.swift */; };
+		455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455BE5FA25CE58800067FF06 /* BasicProfileView.xib */; };
+		456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */; };
+		456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */; };
+		456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */; };
+		456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456C8A4A25CFC65F005A7D32 /* UserListView.swift */; };
+		456C8A4E25CFC66A005A7D32 /* UserListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456C8A4D25CFC66A005A7D32 /* UserListView.xib */; };
 		45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF425B64B6A005E4544 /* AppDelegate.swift */; };
 		45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834CF625B64B6A005E4544 /* SceneDelegate.swift */; };
 		45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45834CFD25B64B6C005E4544 /* Assets.xcassets */; };
@@ -27,12 +43,47 @@
 		45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */; };
 		45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA657625C68E91006802F4 /* ProfileViewController.swift */; };
 		45AA657925C68E91006802F4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AA657725C68E91006802F4 /* ProfileViewController.xib */; };
+		45BD0B0F26E5D38B009AC005 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */; };
+		45BD0B1026E5D38B009AC005 /* ReverseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */; };
+		45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0B1126E5D492009AC005 /* UITableView+.swift */; };
 		B8F31E11E92CCE2C60C26DFD /* Pods_iOS_UISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */; };
+		EF33BA6D27F1573500A9C9C5 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */; };
+		EF3C3EA327C33F3300707312 /* ScrollableStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */; };
+		EF3C3EA427C33F3300707312 /* ScrollableStackViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */; };
+		EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5B4B8827F4297B004A4B8B /* Fruit.swift */; };
+		EF618F8F27E02CDF00E24D96 /* DiffableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */; };
+		EF618F9027E02CDF00E24D96 /* DiffableTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		30DD6D2727C9B98500F58F68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45834CE925B64B6A005E4544 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45834CF025B64B6A005E4544;
+			remoteInfo = "iOS-UISample";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		30414AF029FE01650078931E /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		30414AF129FE01650078931E /* CounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterViewController.xib; sourceTree = "<group>"; };
+		30414AF429FE072E0078931E /* CounterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewControllerTests.swift; sourceTree = "<group>"; };
+		30414AF629FE0C800078931E /* CounterViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewControllerSpec.swift; sourceTree = "<group>"; };
+		30790AEF266AE8160033B488 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		30790AF0266AE8160033B488 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UISampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_UISampleTests.swift; sourceTree = "<group>"; };
+		452272B325D0BC61000051A7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		455BE5F725CE58740067FF06 /* BasicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProfileView.swift; sourceTree = "<group>"; };
+		455BE5FA25CE58800067FF06 /* BasicProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProfileView.xib; sourceTree = "<group>"; };
+		456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		456C8A4A25CFC65F005A7D32 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		456C8A4D25CFC66A005A7D32 /* UserListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListView.xib; sourceTree = "<group>"; };
 		45834CF125B64B6A005E4544 /* iOS-UISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UISample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45834CF425B64B6A005E4544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45834CF625B64B6A005E4544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,12 +104,32 @@
 		45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderView.swift; sourceTree = "<group>"; };
 		45AA657625C68E91006802F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		45AA657725C68E91006802F4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTableViewController.swift; sourceTree = "<group>"; };
+		45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReverseTableViewController.xib; sourceTree = "<group>"; };
+		45BD0B1126E5D492009AC005 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		60719419D51E1F32B63E08FA /* Pods-iOS-UISampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISampleTests.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISampleTests/Pods-iOS-UISampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_UISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76FF7D08550473C8C329979C /* Pods-iOS-UISampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISampleTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISampleTests/Pods-iOS-UISampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.release.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.release.xcconfig"; sourceTree = "<group>"; };
 		9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-UISample.debug.xcconfig"; path = "Target Support Files/Pods-iOS-UISample/Pods-iOS-UISample.debug.xcconfig"; sourceTree = "<group>"; };
+		EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
+		EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewViewController.swift; sourceTree = "<group>"; };
+		EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollableStackViewViewController.xib; sourceTree = "<group>"; };
+		EF5B4B8827F4297B004A4B8B /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewController.swift; sourceTree = "<group>"; };
+		EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiffableTableViewController.xib; sourceTree = "<group>"; };
+		FA8DCCC5D78F731590333442 /* libPods-iOS-UISampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-UISampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		30DD6D2027C9B98500F58F68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0877D69FAECDB1FF1F5A4A87 /* libPods-iOS-UISampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45834CEE25B64B6A005E4544 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,12 +141,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30DD6D2427C9B98500F58F68 /* iOS-UISampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */,
+				30414AF429FE072E0078931E /* CounterViewControllerTests.swift */,
+				30414AF629FE0C800078931E /* CounterViewControllerSpec.swift */,
+			);
+			path = "iOS-UISampleTests";
+			sourceTree = "<group>";
+		};
 		3F009FFAB5AFBBE26A468D46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				76E83C1FE1786DAE2D3C9881 /* Pods_iOS_UISample.framework */,
+				FA8DCCC5D78F731590333442 /* libPods-iOS-UISampleTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		456C8A3625CE6E2E005A7D32 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				45834DFE25B7CAA0005E4544 /* SampleTableViewCell.swift */,
+				45834DFF25B7CAA0005E4544 /* SampleTableViewCell.xib */,
+				45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */,
+				452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */,
+				452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		456C8A3725CE6E3F005A7D32 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				456C8A3D25CE73B1005A7D32 /* UserCollectionViewCell.swift */,
+				456C8A3E25CE73B1005A7D32 /* UserCollectionViewCell.xib */,
+				456C8A4A25CFC65F005A7D32 /* UserListView.swift */,
+				456C8A4D25CFC66A005A7D32 /* UserListView.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		45834CE825B64B6A005E4544 = {
@@ -83,6 +188,7 @@
 			children = (
 				45834D0925B64C51005E4544 /* .swiftlint.yml */,
 				45834CF325B64B6A005E4544 /* iOS-UISample */,
+				30DD6D2427C9B98500F58F68 /* iOS-UISampleTests */,
 				45834CF225B64B6A005E4544 /* Products */,
 				B61D56B328EDE3C513D5FA7A /* Pods */,
 				3F009FFAB5AFBBE26A468D46 /* Frameworks */,
@@ -93,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				45834CF125B64B6A005E4544 /* iOS-UISample.app */,
+				30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +223,8 @@
 				45834E0925B7CE88005E4544 /* Array+.swift */,
 				45834D1A25B65CEA005E4544 /* UIImage+.swift */,
 				45834E0325B7CBAD005E4544 /* UIView+.swift */,
+				452272B325D0BC61000051A7 /* UICollectionView+.swift */,
+				45BD0B1126E5D492009AC005 /* UITableView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -123,6 +232,7 @@
 		45834DE425B7C138005E4544 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF5B4B8827F4297B004A4B8B /* Fruit.swift */,
 				45834DE625B7C1DB005E4544 /* User.swift */,
 			);
 			path = Model;
@@ -139,11 +249,10 @@
 		45834DED25B7C770005E4544 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45834DFE25B7CAA0005E4544 /* SampleTableViewCell.swift */,
-				45834DFF25B7CAA0005E4544 /* SampleTableViewCell.xib */,
-				45834E1D25B8139A005E4544 /* SampleTableHeaderView.swift */,
-				452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */,
-				452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */,
+				456C8A3725CE6E3F005A7D32 /* CollectionView */,
+				456C8A3625CE6E2E005A7D32 /* TableView */,
+				455BE5F725CE58740067FF06 /* BasicProfileView.swift */,
+				455BE5FA25CE58800067FF06 /* BasicProfileView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,11 +260,23 @@
 		45834DEE25B7C777005E4544 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				30790AEF266AE8160033B488 /* ChatViewController.swift */,
+				30790AF0266AE8160033B488 /* ChatViewController.xib */,
+				EF618F8D27E02CDF00E24D96 /* DiffableTableViewController.swift */,
+				EF618F8E27E02CDF00E24D96 /* DiffableTableViewController.xib */,
 				45834D0E25B64DE2005E4544 /* MainTabController.swift */,
-				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
-				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
 				45AA657625C68E91006802F4 /* ProfileViewController.swift */,
 				45AA657725C68E91006802F4 /* ProfileViewController.xib */,
+				45BD0B0D26E5D38B009AC005 /* ReverseTableViewController.swift */,
+				45BD0B0E26E5D38B009AC005 /* ReverseTableViewController.xib */,
+				EF33BA6C27F1573500A9C9C5 /* SampleDataSource.swift */,
+				45834DF825B7CA2A005E4544 /* SampleTableViewController.swift */,
+				45834DF925B7CA2A005E4544 /* SampleTableViewController.xib */,
+				EF3C3EA127C33F3300707312 /* ScrollableStackViewViewController.swift */,
+				EF3C3EA227C33F3300707312 /* ScrollableStackViewViewController.xib */,
+				456C8A3825CE6E6E005A7D32 /* UserListViewController.swift */,
+				30414AF029FE01650078931E /* CounterViewController.swift */,
+				30414AF129FE01650078931E /* CounterViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -177,6 +298,8 @@
 			children = (
 				9721D6F57CDAB7A4B037ACFC /* Pods-iOS-UISample.debug.xcconfig */,
 				7F33030918567F7F01390B00 /* Pods-iOS-UISample.release.xcconfig */,
+				76FF7D08550473C8C329979C /* Pods-iOS-UISampleTests.debug.xcconfig */,
+				60719419D51E1F32B63E08FA /* Pods-iOS-UISampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -184,6 +307,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		30DD6D2227C9B98500F58F68 /* iOS-UISampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30DD6D2B27C9B98500F58F68 /* Build configuration list for PBXNativeTarget "iOS-UISampleTests" */;
+			buildPhases = (
+				C65F88F97F1CA63A8395962B /* [CP] Check Pods Manifest.lock */,
+				30DD6D1F27C9B98500F58F68 /* Sources */,
+				30DD6D2027C9B98500F58F68 /* Frameworks */,
+				30DD6D2127C9B98500F58F68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30DD6D2827C9B98500F58F68 /* PBXTargetDependency */,
+			);
+			name = "iOS-UISampleTests";
+			productName = "iOS-UISampleTests";
+			productReference = 30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45834CF025B64B6A005E4544 /* iOS-UISample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45834D0525B64B6C005E4544 /* Build configuration list for PBXNativeTarget "iOS-UISample" */;
@@ -210,9 +352,14 @@
 		45834CE925B64B6A005E4544 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					30DD6D2227C9B98500F58F68 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 45834CF025B64B6A005E4544;
+					};
 					45834CF025B64B6A005E4544 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -232,21 +379,37 @@
 			projectRoot = "";
 			targets = (
 				45834CF025B64B6A005E4544 /* iOS-UISample */,
+				30DD6D2227C9B98500F58F68 /* iOS-UISampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		30DD6D2127C9B98500F58F68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45834CEF25B64B6A005E4544 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30414AF329FE01650078931E /* CounterViewController.xib in Resources */,
+				456C8A4E25CFC66A005A7D32 /* UserListView.xib in Resources */,
 				45AA657925C68E91006802F4 /* ProfileViewController.xib in Resources */,
 				45834D0A25B64C51005E4544 /* .swiftlint.yml in Resources */,
+				EF3C3EA427C33F3300707312 /* ScrollableStackViewViewController.xib in Resources */,
+				EF618F9027E02CDF00E24D96 /* DiffableTableViewController.xib in Resources */,
 				45834E0125B7CAA0005E4544 /* SampleTableViewCell.xib in Resources */,
+				455BE5FB25CE58800067FF06 /* BasicProfileView.xib in Resources */,
+				30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */,
 				452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */,
 				45834D0125B64B6C005E4544 /* LaunchScreen.storyboard in Resources */,
+				456C8A4025CE73B1005A7D32 /* UserCollectionViewCell.xib in Resources */,
 				45834CFE25B64B6C005E4544 /* Assets.xcassets in Resources */,
+				45BD0B1026E5D38B009AC005 /* ReverseTableViewController.xib in Resources */,
 				45834DFB25B7CA2A005E4544 /* SampleTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +458,7 @@
 		};
 		45834D0C25B64CB3005E4544 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -309,32 +473,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		C65F88F97F1CA63A8395962B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-UISampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		30DD6D1F27C9B98500F58F68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30414AF729FE0C800078931E /* CounterViewControllerSpec.swift in Sources */,
+				30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */,
+				30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45834CED25B64B6A005E4544 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF618F8F27E02CDF00E24D96 /* DiffableTableViewController.swift in Sources */,
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
+				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
+				45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */,
+				EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
+				30414AF229FE01650078931E /* CounterViewController.swift in Sources */,
+				452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */,
 				45834E1F25B8139A005E4544 /* SampleTableHeaderView.swift in Sources */,
 				45834DE725B7C1DB005E4544 /* User.swift in Sources */,
+				455BE5F825CE58740067FF06 /* BasicProfileView.swift in Sources */,
 				45834D1B25B65CEA005E4544 /* UIImage+.swift in Sources */,
 				45834DFA25B7CA2A005E4544 /* SampleTableViewController.swift in Sources */,
 				45834D0F25B64DE2005E4544 /* MainTabController.swift in Sources */,
+				30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */,
+				45BD0B0F26E5D38B009AC005 /* ReverseTableViewController.swift in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
+				456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */,
+				456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */,
 				45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */,
 				45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */,
 				45834DEA25B7C3C2005E4544 /* UserAPI.swift in Sources */,
 				45834E0A25B7CE88005E4544 /* Array+.swift in Sources */,
+				EF33BA6D27F1573500A9C9C5 /* SampleDataSource.swift in Sources */,
+				EF3C3EA327C33F3300707312 /* ScrollableStackViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30DD6D2827C9B98500F58F68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45834CF025B64B6A005E4544 /* iOS-UISample */;
+			targetProxy = 30DD6D2727C9B98500F58F68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45834CFF25B64B6C005E4544 /* LaunchScreen.storyboard */ = {
@@ -348,6 +565,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		30DD6D2927C9B98500F58F68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FF7D08550473C8C329979C /* Pods-iOS-UISampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29X95D42VV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.naginx.iOS-UISampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-UISample.app/iOS-UISample";
+			};
+			name = Debug;
+		};
+		30DD6D2A27C9B98500F58F68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60719419D51E1F32B63E08FA /* Pods-iOS-UISampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29X95D42VV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.naginx.iOS-UISampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-UISample.app/iOS-UISample";
+			};
+			name = Release;
+		};
 		45834D0325B64B6C005E4544 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,6 +730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Q4Y8X7U8H;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,6 +751,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Q4Y8X7U8H;
 				INFOPLIST_FILE = "iOS-UISample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +768,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		30DD6D2B27C9B98500F58F68 /* Build configuration list for PBXNativeTarget "iOS-UISampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30DD6D2927C9B98500F58F68 /* Debug */,
+				30DD6D2A27C9B98500F58F68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45834CEC25B64B6A005E4544 /* Build configuration list for PBXProject "iOS-UISample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

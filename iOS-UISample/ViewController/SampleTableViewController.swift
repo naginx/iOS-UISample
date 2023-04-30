@@ -48,16 +48,12 @@ final class SampleTableViewController: UIViewController {
         postButtonTappedHandler()
     }
 
-    private let headerClassName = SampleTableHeaderView.identifier
-    private let cellClassName = SampleTableViewCell.identifier
+    private let headerClassName = SampleTableHeaderView.className
+    private let cellClassName = SampleTableViewCell.className
 
     private let api = UserAPI()
-
     private let refreshControl = UIRefreshControl()
-
     private var users = [User]()
-
-    private var header: SampleTableHeaderView?
 
     // MARK: - LifeCycle
 
@@ -166,7 +162,6 @@ extension SampleTableViewController: UITableViewDataSource {
 
         // ヘッダーが作成されるタイミングでdelegateの設定
         header.delegate = self
-        self.header = header
         return header
     }
 }
@@ -175,7 +170,8 @@ extension SampleTableViewController: UITableViewDataSource {
 
 extension SampleTableViewController: SampleTableHeaderViewDelegate {
 
-    func didTapProfileImage(_ header: SampleTableHeaderView, didSelectUser user: User) {
+    /// セルタップ時に呼ばれるDelgateメソッド
+    func sampleTableHeaderView(_ header: SampleTableHeaderView, didSelect user: User) {
         let vc = ProfileViewController(user: user)
         navigationController?.pushViewController(vc, animated: true)
     }

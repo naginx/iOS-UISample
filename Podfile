@@ -3,11 +3,20 @@ platform :ios, '13.0'
 
 target 'iOS-UISample' do
   use_frameworks!
+  inhibit_all_warnings!
 
   # Pods for iOS-UISample
+  pod 'EnhancedCircleImageView'
+  pod 'FontAwesome.swift'
+  pod 'MessageKit'
   pod 'SDWebImage'
   pod 'SnapKit'
+  pod "ReverseExtension"
+end
 
+target 'iOS-UISampleTests' do
+  pod 'Quick'
+  pod 'Nimble'
 end
 
 post_install do |installer|

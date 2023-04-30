@@ -9,9 +9,9 @@ import Foundation
 
 final class UserAPI {
 
-    /// APIの代わりに2秒待ってからユーザーのリストを返す処理
+    /// APIの代わりにn秒待ってからユーザーのリストを返す処理
     func getUsers(completion: (([User]?, Error?) -> Void)? = nil) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let jsonData = self.userData()
 
             // JSONのデコードで例外が発生する可能性があるため, do-catch
@@ -77,14 +77,14 @@ private extension UserAPI {
     },
     {
         "id": 7,
-        "name": "炭治郎",
+        "name": "三郎",
         "age": 43,
         "image": "tasogare_man",
         "message": "寂しいです(泣)"
     },
     {
         "id": 8,
-        "name": "君麻呂",
+        "name": "四郎",
         "age": 28,
         "image": "battou_man",
         "message": "どうも"

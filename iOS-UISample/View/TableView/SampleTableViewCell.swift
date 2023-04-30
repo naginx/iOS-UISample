@@ -14,7 +14,6 @@ final class SampleTableViewCell: UITableViewCell {
     @IBOutlet weak private var profileImage: UIImageView! {
         didSet {
             profileImage.contentMode = .scaleAspectFill
-            profileImage.clipsToBounds = true
         }
     }
 
@@ -39,13 +38,6 @@ final class SampleTableViewCell: UITableViewCell {
     }
 
     static let height: CGFloat = 60
-
-    // MARK: - LifeCycle
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
-    }
 
     // MARK: - Helpers
 

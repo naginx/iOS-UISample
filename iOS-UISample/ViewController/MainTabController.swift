@@ -18,17 +18,20 @@ final class MainTabController: UITabBarController {
         configureViewControllers()
     }
 
-    // MARK: - Selectors
-
-    // MARK: - API
-
     // MARK: - Helpers
 
     private func configureViewControllers() {
-        let tableVC = SampleTableViewController()
-        let nav1 = templateNavigationController(image: UIImage.named("home_unselected"), rootViewController: tableVC)
+        let tableVC = DiffableTableViewController()
+        let nav1 = templateNavigationController(image: UIImage.named("home_unselected"),
+                                                rootViewController: tableVC)
 
-        viewControllers = [nav1]
+        let collectionVC = UserListViewController()
+        let nav2 = templateNavigationController(image: UIImage.named("search_unselected"),
+                                                rootViewController: collectionVC)
+        let chatVC = ChatViewController()
+        let nav3 = templateNavigationController(image: UIImage.named("comment"),
+                                                rootViewController: chatVC)
+        viewControllers = [nav1, nav2, nav3]
     }
 
     private func templateNavigationController(image: UIImage,

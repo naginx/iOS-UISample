@@ -1,17 +1,17 @@
 # SwiftLintFramework Docs: https://realm.github.io/SwiftLint/index.html
-# ルール引用元: https://qiita.com/rd0501/items/ceabe756c419ec082030
 # ルール追加時の参考: https://qiita.com/uhooi/items/7f5d6cf2b240f60ba1ed#opt-in
+# ルール引用元: https://qiita.com/rd0501/items/ceabe756c419ec082030
 
-# 無効にするルール。
+# デフォルト有効のルールのうち、無効にするもの
 disabled_rules:
-# コードの記載のない改行を許可したい
+# コードの記載のない改行を許可するため
 - trailing_whitespace
 # force_castは場合によっては使用するため
 - force_cast
 # closureが返すパラメータを明示しておきたい場合があるため
 - unused_closure_parameter
 
-# デフォルト無効のルールのうち、有効にするもの。
+# デフォルト無効のルールのうち、有効にするもの
 opt_in_rules:
 - closure_end_indentation
 - closure_spacing
@@ -38,8 +38,7 @@ excluded:
 - Pods/
 - Carthage/
 
-# 1行あたりの文字数制限を300に変更
-# プロジェクト作成時にデフォルトで追加されるコメントをひっかけないため
+# 1行あたりの文字数制限変更
 line_length: 120
 
 # 変数名に関する制約
