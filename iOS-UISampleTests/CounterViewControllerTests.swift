@@ -1,10 +1,3 @@
-//
-//  CounterViewControllerTests.swift
-//  iOS-UISampleTests
-//
-//  Created by nagisa miura on 2023/04/30.
-//
-
 import XCTest
 @testable import iOS_UISample
 

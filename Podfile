@@ -14,6 +14,11 @@ target 'iOS-UISample' do
   pod "ReverseExtension"
 end
 
+target 'iOS-UISampleTests' do
+  pod 'Quick'
+  pod 'Nimble'
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
