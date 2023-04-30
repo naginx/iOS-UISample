@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CounterViewController" customModule="iOS_UISample" customModuleProvider="target">
             <connections>
                 <outlet property="countLabel" destination="YAe-et-hGS" id="QMZ-nU-c6c"/>
+                <outlet property="declementButton" destination="19l-4k-uF3" id="RXn-IO-vJg"/>
+                <outlet property="incrementButton" destination="OTo-YP-IOC" id="E9O-7M-WCT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

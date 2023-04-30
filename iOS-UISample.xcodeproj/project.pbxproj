@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		30414AF229FE01650078931E /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF029FE01650078931E /* CounterViewController.swift */; };
 		30414AF329FE01650078931E /* CounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30414AF129FE01650078931E /* CounterViewController.xib */; };
+		30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF429FE072E0078931E /* CounterViewControllerTests.swift */; };
 		30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30790AEF266AE8160033B488 /* ChatViewController.swift */; };
 		30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30790AF0266AE8160033B488 /* ChatViewController.xib */; };
 		30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		30414AF029FE01650078931E /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		30414AF129FE01650078931E /* CounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterViewController.xib; sourceTree = "<group>"; };
+		30414AF429FE072E0078931E /* CounterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewControllerTests.swift; sourceTree = "<group>"; };
 		30790AEF266AE8160033B488 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		30790AF0266AE8160033B488 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UISampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */,
+				30414AF429FE072E0078931E /* CounterViewControllerTests.swift */,
 			);
 			path = "iOS-UISampleTests";
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */,
 				30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
