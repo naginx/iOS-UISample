@@ -21,11 +21,23 @@ final class CounterViewControllerSpec: QuickSpec {
         describe("+ボタンをタップ") {
             context("現在値が0") {
                 it("カウンタが1に増えること") {
-                    vc.incrementButton.sendActions(for: .touchUpInside)
+                    vc.incrementButton.tap()
                     expect(vc.countLabel.text).to(equal("1"))
                 }
             }
         }
 
+        describe("-ボタンをタップ") {
+            context("現在値が1") {
+                beforeEach {
+                    vc.incrementButton.tap()
+                }
+
+                it("カウンタが0に減ること") {
+                    vc.decrementButton.tap()
+                    expect(vc.countLabel.text).to(equal("0"))
+                }
+            }
+        }
     }
 }

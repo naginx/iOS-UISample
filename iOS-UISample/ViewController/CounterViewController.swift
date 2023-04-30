@@ -10,13 +10,14 @@ import UIKit
 final class CounterViewController: UIViewController {
 
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var declementButton: UIButton!
+    @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var incrementButton: UIButton!
 
     var count: Int = 0
 
     @IBAction private func tappedDecrementButton(_ sender: UIButton) {
-
+        count -= 1
+        updateView()
     }
 
     @IBAction private func tappedIncrementButton(_ sender: UIButton) {
