@@ -331,14 +331,9 @@
 		45834CE925B64B6A005E4544 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-<<<<<<< Updated upstream
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1430;
-=======
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1230;
->>>>>>> Stashed changes
 				TargetAttributes = {
 					30DD6D2227C9B98500F58F68 = {
 						CreatedOnToolsVersion = 13.2.1;
