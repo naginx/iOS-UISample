@@ -1,16 +1,16 @@
 PODS:
   - EnhancedCircleImageView (0.1)
   - FontAwesome.swift (1.9.1)
-  - InputBarAccessoryView (5.3.1):
-    - InputBarAccessoryView/Core (= 5.3.1)
-  - InputBarAccessoryView/Core (5.3.1)
-  - MessageKit (3.6.1):
-    - InputBarAccessoryView (~> 5.3.1)
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
   - ReverseExtension (0.6.0)
-  - SDWebImage (5.10.2):
-    - SDWebImage/Core (= 5.10.2)
-  - SDWebImage/Core (5.10.2)
-  - SnapKit (5.0.1)
+  - SDWebImage (5.15.6):
+    - SDWebImage/Core (= 5.15.6)
+  - SDWebImage/Core (5.15.6)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - EnhancedCircleImageView
@@ -33,11 +33,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   EnhancedCircleImageView: 1069bbc14526d89502cc0e48b45f5da6a3317a47
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
-  InputBarAccessoryView: 1f75d8c9f75e5e57f3ffac36ed58635a8005e0bc
-  MessageKit: d153fbbbcb12f3f4045a1ba8874298924dacfb62
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   ReverseExtension: 5c7ca8c165f47e9bde8e26084d5e7bf21ad4f5a6
-  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 7d142d165de1974d22102df7e6beec735245a879
 
