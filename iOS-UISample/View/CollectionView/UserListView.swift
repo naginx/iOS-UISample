@@ -23,7 +23,7 @@ final class UserListView: UIView {
         }
     }
 
-    let refreshControl: UIRefreshControl = {
+    lazy var refreshControl: UIRefreshControl = {
         let refresher = UIRefreshControl()
         refresher.addTarget(self,
                             action: #selector(refresh),
