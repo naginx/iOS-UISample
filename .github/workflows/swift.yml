@@ -22,7 +22,7 @@ jobs:
         pod install
     - name: Build
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' build
+        swift build -v
     - name: Test
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' test
+        swift test -v
