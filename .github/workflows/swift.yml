@@ -22,7 +22,7 @@ jobs:
         pod install
     - name: Build
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' build
+        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' -destination 'platform=iOS Simulator,name=iPhone 12' build
     - name: Test
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' test
+        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' -destination 'platform=iOS Simulator,name=iPhone 12' test
