@@ -15,6 +15,7 @@
 		30790AF1266AE8160033B488 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30790AEF266AE8160033B488 /* ChatViewController.swift */; };
 		30790AF2266AE8160033B488 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30790AF0266AE8160033B488 /* ChatViewController.xib */; };
 		30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */; };
+		30EA59F829FE331A008A883F /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA59F729FE331A008A883F /* UIButton+.swift */; };
 		452272B425D0BC61000051A7 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452272B325D0BC61000051A7 /* UICollectionView+.swift */; };
 		452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */; };
 		452CAD1C25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */; };
@@ -74,6 +75,7 @@
 		30790AF0266AE8160033B488 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		30DD6D2327C9B98500F58F68 /* iOS-UISampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UISampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_UISampleTests.swift; sourceTree = "<group>"; };
+		30EA59F729FE331A008A883F /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		452272B325D0BC61000051A7 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		452CAD1925C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		452CAD1A25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleTableHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				45834E0325B7CBAD005E4544 /* UIView+.swift */,
 				452272B325D0BC61000051A7 /* UICollectionView+.swift */,
 				45BD0B1126E5D492009AC005 /* UITableView+.swift */,
+				30EA59F729FE331A008A883F /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				45834CF525B64B6A005E4544 /* AppDelegate.swift in Sources */,
 				45834E0025B7CAA0005E4544 /* SampleTableViewCell.swift in Sources */,
 				456C8A3F25CE73B1005A7D32 /* UserCollectionViewCell.swift in Sources */,
+				30EA59F829FE331A008A883F /* UIButton+.swift in Sources */,
 				45BD0B1226E5D492009AC005 /* UITableView+.swift in Sources */,
 				EF5B4B8927F4297B004A4B8B /* Fruit.swift in Sources */,
 				452CAD1B25C37EF9003D4005 /* SampleTableHeaderCollectionViewCell.swift in Sources */,
