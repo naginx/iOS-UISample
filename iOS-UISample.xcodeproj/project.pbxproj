@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0877D69FAECDB1FF1F5A4A87 /* libPods-iOS-UISampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8DCCC5D78F731590333442 /* libPods-iOS-UISampleTests.a */; };
+		301839F62A03880F005EE6D0 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301839F52A03880F005EE6D0 /* Counter.swift */; };
+		301839F82A03899D005EE6D0 /* CounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301839F72A03899D005EE6D0 /* CounterSpec.swift */; };
 		30414AF229FE01650078931E /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF029FE01650078931E /* CounterViewController.swift */; };
 		30414AF329FE01650078931E /* CounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30414AF129FE01650078931E /* CounterViewController.xib */; };
 		30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30414AF429FE072E0078931E /* CounterViewControllerTests.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301839F52A03880F005EE6D0 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		301839F72A03899D005EE6D0 /* CounterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSpec.swift; sourceTree = "<group>"; };
 		30414AF029FE01650078931E /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		30414AF129FE01650078931E /* CounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterViewController.xib; sourceTree = "<group>"; };
 		30414AF429FE072E0078931E /* CounterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewControllerTests.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				30DD6D2527C9B98500F58F68 /* iOS_UISampleTests.swift */,
 				30414AF429FE072E0078931E /* CounterViewControllerTests.swift */,
 				30414AF629FE0C800078931E /* CounterViewControllerSpec.swift */,
+				301839F72A03899D005EE6D0 /* CounterSpec.swift */,
 			);
 			path = "iOS-UISampleTests";
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			children = (
 				EF5B4B8827F4297B004A4B8B /* Fruit.swift */,
 				45834DE625B7C1DB005E4544 /* User.swift */,
+				301839F52A03880F005EE6D0 /* Counter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				30414AF729FE0C800078931E /* CounterViewControllerSpec.swift in Sources */,
 				30414AF529FE072E0078931E /* CounterViewControllerTests.swift in Sources */,
 				30DD6D2627C9B98500F58F68 /* iOS_UISampleTests.swift in Sources */,
+				301839F82A03899D005EE6D0 /* CounterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +544,7 @@
 				45BD0B0F26E5D38B009AC005 /* ReverseTableViewController.swift in Sources */,
 				45834E0425B7CBAD005E4544 /* UIView+.swift in Sources */,
 				456C8A4B25CFC65F005A7D32 /* UserListView.swift in Sources */,
+				301839F62A03880F005EE6D0 /* Counter.swift in Sources */,
 				456C8A3A25CE6E6E005A7D32 /* UserListViewController.swift in Sources */,
 				45834CF725B64B6A005E4544 /* SceneDelegate.swift in Sources */,
 				45AA657825C68E91006802F4 /* ProfileViewController.swift in Sources */,
