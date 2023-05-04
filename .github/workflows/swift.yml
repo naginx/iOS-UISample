@@ -20,12 +20,9 @@ jobs:
       run: |
         gem install cocoapods
         pod install
-    - name: Install SwiftLint
-      run: |
-        brew install swiftlint
     - name: Build
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' -destination 'platform=iOS Simulator,name=iPhone 12' build
+        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' build
     - name: Test
       run: |
-        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' -destination 'platform=iOS Simulator,name=iPhone 12' test
+        xcodebuild -workspace 'iOS-UISample.xcworkspace' -scheme 'iOS-UISample' test
