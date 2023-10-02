@@ -54,6 +54,7 @@ private final class DateFormatters {
 struct DateFormatterConfig: Equatable {
 
     static let `default` = DateFormatterConfig()
+    static let japan = DateFormatterConfig(format: "yyyy年MM月dd日", locale: .jaJP)
 
     let format: String
     let locale: Locale
@@ -81,4 +82,11 @@ extension Calendar {
         calendar.timeZone = .current
         return calendar
     }
+}
+
+extension Locale {
+
+    static let enUsPOSIX = Locale(identifier: "en_US_POSIX")
+    static let jaJP = Locale(identifier: "ja_JP")
+    static let ja = Locale(identifier: "ja")
 }
